@@ -1,0 +1,2994 @@
+/*
+=====================================================
+
+FORGOTTEN GOLDEN SANCTUARY
+
+Dark Fantasy Archive Theme
+Obsidian Community Theme
+
+Comfort Reading Edition
+
+=====================================================
+*/
+
+
+.theme-dark {
+
+
+/* =====================
+   SANCTUARY COLORS
+   ===================== */
+
+
+--sanctuary-bg:
+#12110f;
+
+
+--sanctuary-surface:
+#191714;
+
+
+--sanctuary-panel:
+#211d18;
+
+
+
+/* GOLD PALETTE */
+
+
+--sanctuary-gold:
+#b8964a;
+
+
+--sanctuary-gold-soft:
+#cdb783;
+
+
+--sanctuary-gold-bright:
+#ead79a;
+
+
+--sanctuary-bronze:
+#80653b;
+
+
+
+/* TEXT PALETTE */
+
+
+--sanctuary-text:
+#c2baa8;
+
+
+--sanctuary-text-soft:
+#a99f8d;
+
+
+--sanctuary-muted:
+#81796c;
+
+
+
+/* OBSIDIAN CORE */
+
+
+--background-primary:
+var(--sanctuary-bg);
+
+
+--background-secondary:
+#0e0d0b;
+
+
+--background-secondary-alt:
+var(--sanctuary-surface);
+
+
+
+--background-modifier-border:
+
+rgba(184,150,74,.14);
+
+
+
+/* TEXT */
+
+
+--text-normal:
+
+var(--sanctuary-text);
+
+
+--text-muted:
+
+var(--sanctuary-muted);
+
+
+--text-accent:
+
+var(--sanctuary-gold);
+
+
+
+/* INTERACTION */
+
+
+--interactive-accent:
+
+var(--sanctuary-gold);
+
+
+--interactive-hover:
+
+rgba(184,150,74,.10);
+
+
+}
+/* =====================================================
+   02 - GLOBAL ATMOSPHERE
+   FORGOTTEN SANCTUARY AMBIENCE
+   ===================================================== */
+
+
+.app-container {
+
+
+background:
+
+
+radial-gradient(
+circle at 20% 80%,
+rgba(184,150,74,.035),
+transparent 45%
+),
+
+
+linear-gradient(
+180deg,
+#151310,
+#0f0e0c
+);
+
+
+}
+
+
+
+/* =====================================================
+   WORKSPACE
+   KEEP OBSIDIAN STABLE
+   ===================================================== */
+
+
+.workspace,
+.workspace-split {
+
+
+background:
+
+transparent!important;
+
+
+}
+
+
+
+.workspace-leaf {
+
+
+background:
+
+transparent;
+
+
+}
+
+
+
+/* =====================================================
+   TEXT RENDERING
+   COMFORT READING
+   ===================================================== */
+
+
+body {
+
+
+-webkit-font-smoothing:
+
+antialiased;
+
+
+-moz-osx-font-smoothing:
+
+grayscale;
+
+
+}
+/* =====================================================
+   03 - READING AREA
+   FORGOTTEN ARCHIVE CHAMBER
+   COMFORT EDITION
+   ===================================================== */
+
+
+/* Main workspace page */
+
+
+.workspace-leaf-content {
+
+
+background:
+
+var(--sanctuary-bg);
+
+
+}
+
+
+
+/* Reading surface */
+
+
+.markdown-preview-view,
+.markdown-source-view {
+
+
+background:
+
+
+linear-gradient(
+145deg,
+#1b1915,
+#171512
+)!important;
+
+
+}
+
+
+
+/* =====================================================
+   READING WIDTH
+   LONG FORM COMFORT
+   ===================================================== */
+
+
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-source-view .cm-sizer {
+
+
+max-width:
+
+850px;
+
+
+margin-left:
+
+auto;
+
+
+margin-right:
+
+auto;
+
+
+}
+
+
+
+/* Better reading focus */
+
+
+.markdown-preview-view {
+
+
+padding-left:
+
+24px;
+
+
+padding-right:
+
+24px;
+
+
+}
+/* =====================================================
+   04 - TYPOGRAPHY
+   COMFORT READING SYSTEM
+   ===================================================== */
+
+
+/* Default UI font */
+
+
+body {
+
+
+font-family:
+
+"Inter",
+sans-serif;
+
+
+}
+
+
+
+/* Main document text */
+
+
+.markdown-preview-view {
+
+
+font-size:
+
+17px;
+
+
+line-height:
+
+1.85;
+
+
+color:
+
+var(--sanctuary-text);
+
+
+letter-spacing:
+
+0.1px;
+
+
+}
+
+
+
+/* Paragraph breathing space */
+
+
+.markdown-preview-view p {
+
+
+margin-bottom:
+
+1.35em;
+
+
+}
+
+
+
+/* Reading mode links */
+
+.markdown-preview-view strong {
+
+
+color:
+
+#d1c29c;
+
+
+font-weight:
+
+600;
+
+
+}
+/* =====================================================
+   05 - HEADINGS
+   ANCIENT MANUSCRIPT STYLE
+   ===================================================== */
+
+
+/* All heading fonts */
+
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3 {
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+letter-spacing:
+
+0.5px;
+
+
+font-weight:
+
+600;
+
+
+}
+
+
+
+/* =====================================================
+   MAIN TITLE
+   SACRED ARCHIVE COVER
+   ===================================================== */
+
+
+.markdown-preview-view h1 {
+
+
+font-family:
+
+"Cinzel Decorative",
+serif;
+
+
+color:
+
+var(--sanctuary-gold-soft)!important;
+
+
+font-size:
+
+2em;
+
+
+border-bottom:
+
+1px solid rgba(184,150,74,.20);
+
+
+padding-bottom:
+
+10px;
+
+
+}
+
+
+
+/* =====================================================
+   CHAPTER TITLES
+   ===================================================== */
+
+
+.markdown-preview-view h2 {
+
+
+color:
+
+#d1c29c!important;
+
+
+}
+
+
+
+/* =====================================================
+   SECTION TITLES
+   ===================================================== */
+
+
+.markdown-preview-view h3 {
+
+
+color:
+
+var(--sanctuary-gold)!important;
+
+
+}
+/* =====================================================
+   06 - LINKS
+   GOLDEN THREADS
+   ===================================================== */
+
+
+/* Normal links */
+
+
+.internal-link,
+.external-link {
+
+
+color:
+
+#bda875!important;
+
+
+transition:
+
+color .15s ease;
+
+
+}
+
+
+
+/* Link hover */
+
+
+.internal-link:hover,
+.external-link:hover {
+
+
+color:
+
+var(--sanctuary-gold-bright)!important;
+
+
+text-shadow:
+
+
+0 0 5px rgba(184,150,74,.18);
+
+
+}
+
+
+
+/* =====================================================
+   CURSOR + TEXT SELECTION
+   ===================================================== */
+
+
+/* Selected text */
+
+
+::selection {
+
+
+background:
+
+rgba(184,150,74,.16);
+
+
+color:
+
+#f5f0df;
+
+
+}
+
+
+
+/* Editor cursor */
+
+
+.cm-cursor {
+
+
+border-left:
+
+2px solid var(--sanctuary-gold-soft)!important;
+
+
+}
+/* =====================================================
+   07 - TITLE BAR
+   OBSIDIAN GOLDEN FRAME
+   ===================================================== */
+
+
+.titlebar {
+
+
+background:
+
+#0e0d0b!important;
+
+
+color:
+
+var(--sanctuary-gold-soft)!important;
+
+
+}
+
+
+
+.titlebar-text {
+
+
+color:
+
+var(--sanctuary-gold-soft)!important;
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+letter-spacing:
+
+0.5px;
+
+
+}
+
+
+
+/* =====================================================
+   TAB SYSTEM
+   ANCIENT ARCHIVE SCROLLS
+   ===================================================== */
+
+
+.workspace-tab-header-container {
+
+
+background:
+
+#100f0d!important;
+
+
+border-bottom:
+
+1px solid rgba(184,150,74,.12);
+
+
+}
+
+
+
+/* Normal tabs */
+
+
+.workspace-tab-header {
+
+
+background:
+
+#171512!important;
+
+
+color:
+
+var(--sanctuary-text-soft)!important;
+
+
+border-bottom:
+
+2px solid transparent;
+
+
+transition:
+
+
+background .15s ease,
+color .15s ease;
+
+
+}
+
+
+
+/* Hover tab */
+
+
+.workspace-tab-header:hover {
+
+
+background:
+
+rgba(184,150,74,.06)!important;
+
+
+color:
+
+var(--sanctuary-gold-soft)!important;
+
+
+}
+
+
+
+/* Active tab */
+
+
+.workspace-tab-header.is-active {
+
+
+background:
+
+#211c14!important;
+
+
+color:
+
+var(--sanctuary-gold-soft)!important;
+
+
+border-bottom:
+
+2px solid var(--sanctuary-gold);
+
+
+}
+/* =====================================================
+   08 - ICONS
+   GOLDEN ARCHIVE TOOLS
+   ===================================================== */
+
+
+.clickable-icon,
+.svg-icon {
+
+
+color:
+
+var(--sanctuary-gold)!important;
+
+
+transition:
+
+background .15s ease,
+color .15s ease;
+
+
+}
+
+
+
+.clickable-icon:hover {
+
+
+background:
+
+rgba(184,150,74,.10);
+
+
+border-radius:
+
+8px;
+
+
+color:
+
+var(--sanctuary-gold-bright)!important;
+
+
+}
+
+
+
+/* =====================================================
+   FILE EXPLORER
+   FORGOTTEN LIBRARY SHELVES
+   STABLE NO-JUMP VERSION
+   ===================================================== */
+
+
+
+/* Folder and files */
+
+
+.nav-folder-title,
+.nav-file-title {
+
+
+color:
+
+#c8bea8;
+
+
+font-family:
+
+"Inter",
+sans-serif;
+
+
+letter-spacing:
+
+0.2px;
+
+
+/*
+IMPORTANT:
+Do NOT use border-left
+Do NOT change padding
+*/
+
+
+transition:
+
+background .15s ease,
+color .15s ease;
+
+
+}
+
+
+
+/* Hover */
+
+
+.nav-folder-title:hover,
+.nav-file-title:hover {
+
+
+background:
+
+rgba(184,150,74,.08);
+
+
+color:
+
+var(--sanctuary-gold-soft);
+
+
+}
+
+
+
+/* Active file */
+
+
+.nav-file-title.is-active {
+
+
+background:
+
+rgba(184,150,74,.12);
+
+
+color:
+
+var(--sanctuary-gold-soft)!important;
+
+
+}
+
+
+
+/* Remove default icons */
+
+
+.nav-folder-title-content::before,
+.nav-file-title-content::before {
+
+
+content:"";
+
+
+}
+
+
+
+/* Folder arrows */
+
+
+.nav-folder-collapse-indicator {
+
+
+color:
+
+var(--sanctuary-gold-soft);
+
+
+}
+
+
+
+/* =====================================================
+   FILE TREE STABILITY
+   PREVENT INDENT DRIFT
+   ===================================================== */
+
+
+.nav-folder,
+.nav-file {
+
+
+transition:none!important;
+
+
+}
+
+
+
+/* Keep Obsidian native indentation */
+
+
+.nav-folder-children {
+
+
+margin-left:
+
+0!important;
+
+
+padding-left:
+
+0!important;
+
+
+}
+/* =====================================================
+   09 - ANCIENT RECORD CALLOUT SYSTEM
+   FORGOTTEN ARCHIVE CARDS
+   ===================================================== */
+
+
+.callout {
+
+
+background:
+
+#211d18;
+
+
+border:
+
+1px solid rgba(184,150,74,.14);
+
+
+border-radius:
+
+12px;
+
+
+box-shadow:
+
+0 8px 25px rgba(0,0,0,.28);
+
+
+}
+
+
+
+/* Callout title */
+
+
+.callout-title {
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+color:
+
+var(--sanctuary-gold-soft);
+
+
+letter-spacing:
+
+0.4px;
+
+
+}
+
+
+
+/* Callout text */
+
+
+.callout-content {
+
+
+color:
+
+var(--sanctuary-text);
+
+
+}
+
+
+
+/* =====================================================
+   LORE
+   ===================================================== */
+
+
+.callout[data-callout="lore"] {
+
+
+border-left:
+
+4px solid var(--sanctuary-gold);
+
+
+background:
+
+
+linear-gradient(
+90deg,
+rgba(184,150,74,.08),
+#211d18
+);
+
+
+}
+
+
+
+/* =====================================================
+   JOURNAL
+   ===================================================== */
+
+
+.callout[data-callout="journal"] {
+
+
+border-left:
+
+4px solid #bda875;
+
+
+}
+
+
+
+/* =====================================================
+   RESEARCH
+   ===================================================== */
+
+
+.callout[data-callout="research"] {
+
+
+border-left:
+
+4px solid #7d8da8;
+
+
+}
+
+
+
+/* =====================================================
+   SECRET
+   ===================================================== */
+
+
+.callout[data-callout="secret"] {
+
+
+border-left:
+
+4px solid #72552d;
+
+
+}
+
+
+
+/* =====================================================
+   ARTIFACT
+   ===================================================== */
+
+
+.callout[data-callout="artifact"] {
+
+
+border-left:
+
+4px solid #d1b86b;
+
+
+}
+
+
+
+/* =====================================================
+   QUEST
+   ===================================================== */
+
+
+.callout[data-callout="quest"] {
+
+
+border-left:
+
+4px solid #a87542;
+
+
+}
+
+
+
+/* =====================================================
+   WARNING
+   ===================================================== */
+
+
+.callout[data-callout="warning"] {
+
+
+border-left:
+
+4px solid #a95656;
+
+
+}
+/* =====================================================
+   10 - ROYAL BLOCKQUOTE
+   ANCIENT QUOTE SCROLL
+   ===================================================== */
+
+
+blockquote {
+
+
+border-left:
+
+3px solid var(--sanctuary-gold);
+
+
+background:
+
+rgba(184,150,74,.05);
+
+
+padding:
+
+14px 18px;
+
+
+color:
+
+#c7bda7;
+
+
+font-style:
+
+italic;
+
+
+border-radius:
+
+8px;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   11 - ARCHIVE TABLES
+   UNIFIED PARCHMENT STYLE
+   ===================================================== */
+
+
+/* Table container */
+
+
+.markdown-preview-view table {
+
+
+width:
+
+100%!important;
+
+
+background:
+
+#17140f;
+
+
+border:
+
+1px solid rgba(184,150,74,.30);
+
+
+border-collapse:
+
+collapse;
+
+
+border-radius:
+
+10px;
+
+
+overflow:
+
+hidden;
+
+
+}
+
+
+
+
+
+/* Header */
+
+
+.markdown-preview-view th {
+
+
+background:
+
+#17140f!important;
+
+
+color:
+
+#d8cdb5!important;
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+font-weight:
+
+600;
+
+
+padding:
+
+12px 15px;
+
+
+border-bottom:
+
+1px solid rgba(184,150,74,.25);
+
+
+}
+
+
+
+
+
+/* Body */
+
+
+.markdown-preview-view td {
+
+
+background:
+
+#17140f!important;
+
+
+color:
+
+#d8cdb5!important;
+
+
+padding:
+
+12px 15px;
+
+
+border-bottom:
+
+1px solid rgba(184,150,74,.15);
+
+
+}
+
+
+
+
+
+/* Remove first column special color */
+
+
+.markdown-preview-view td:first-child {
+
+
+color:
+
+#d8cdb5!important;
+
+
+}
+
+
+
+
+
+/* Row hover */
+
+
+.markdown-preview-view tr:hover td {
+
+
+background:
+
+rgba(184,150,74,.06)!important;
+
+
+color:
+
+#ead79a!important;
+
+
+}
+/* =====================================================
+   12 - DATAVIEW ROYAL CATALOG
+   ARCHIVE RECORD TABLES
+   ===================================================== */
+
+
+.dataview.table-view-table {
+
+
+width:
+
+100%!important;
+
+
+background:
+
+#17140f;
+
+
+border:
+
+1px solid rgba(184,150,74,.30);
+
+
+border-collapse:
+
+collapse;
+
+
+}
+
+
+
+
+
+/* Dataview header */
+
+
+.dataview.table-view-table th {
+
+
+background:
+
+#17140f!important;
+
+
+color:
+
+#d8cdb5!important;
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+font-weight:
+
+600;
+
+
+padding:
+
+12px 15px;
+
+
+border:
+
+1px solid rgba(184,150,74,.15);
+
+
+}
+
+
+
+
+
+/* Dataview body */
+
+
+.dataview.table-view-table td {
+
+
+background:
+
+#17140f!important;
+
+
+color:
+
+#d8cdb5!important;
+
+
+padding:
+
+12px 15px;
+
+
+border:
+
+1px solid rgba(184,150,74,.15);
+
+
+}
+
+
+
+
+
+/* Same colour all columns */
+
+
+.dataview.table-view-table td:first-child {
+
+
+color:
+
+#d8cdb5!important;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   13 - TAGS
+   ROYAL SEALS
+   ===================================================== */
+
+
+.tag {
+
+
+background:
+
+rgba(184,150,74,.08);
+
+
+border:
+
+1px solid rgba(184,150,74,.20);
+
+
+border-radius:
+
+20px;
+
+
+color:
+
+var(--sanctuary-gold-soft);
+
+
+padding:
+
+3px 10px;
+
+
+transition:
+
+background .15s ease,
+color .15s ease;
+
+
+}
+
+
+
+
+
+.tag:hover {
+
+
+background:
+
+rgba(184,150,74,.16);
+
+
+color:
+
+var(--sanctuary-gold-bright);
+
+
+}
+/* =====================================================
+   14 - TASK SYSTEM
+   QUEST TRACKER
+   ===================================================== */
+
+
+.task-list-item-checkbox {
+
+
+appearance:
+
+none;
+
+
+width:
+
+17px;
+
+
+height:
+
+17px;
+
+
+border:
+
+1px solid var(--sanctuary-bronze);
+
+
+background:
+
+#12110f;
+
+
+border-radius:
+
+4px;
+
+
+vertical-align:
+
+middle;
+
+
+}
+
+
+
+
+
+/* Checked quest */
+
+
+.task-list-item-checkbox:checked {
+
+
+background:
+
+var(--sanctuary-gold);
+
+
+box-shadow:
+
+0 0 8px rgba(184,150,74,.35);
+
+
+}
+
+
+
+
+
+/* Completed task text */
+
+
+.task-list-item.is-checked {
+
+
+color:
+
+var(--sanctuary-muted);
+
+
+text-decoration:
+
+line-through;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   15 - PROPERTIES PANEL
+   ARCHIVE METADATA
+   ===================================================== */
+
+
+.metadata-container {
+
+
+background:
+
+var(--sanctuary-surface);
+
+
+border:
+
+1px solid rgba(184,150,74,.16);
+
+
+border-radius:
+
+12px;
+
+
+padding:
+
+8px;
+
+
+}
+
+
+
+
+
+.metadata-property-key {
+
+
+color:
+
+var(--sanctuary-gold);
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+}
+
+
+
+
+
+.metadata-property-value {
+
+
+color:
+
+var(--sanctuary-text);
+
+
+}
+/* =====================================================
+   16 - GRAPH VIEW
+   FORGOTTEN GOLDEN CONSTELLATION
+   PERFORMANCE EDITION
+   ===================================================== */
+
+
+/* Background */
+
+
+.graph-view {
+
+
+background:
+
+
+radial-gradient(
+circle at center,
+rgba(184,150,74,.08),
+transparent 35%
+),
+
+
+linear-gradient(
+160deg,
+#080706,
+#17120b,
+#050403
+)!important;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   NODE COLORS
+   ===================================================== */
+
+
+.graph-view.color-fill {
+
+
+color:
+
+#d4a84f;
+
+
+}
+
+
+
+.graph-view.color-fill-focused {
+
+
+color:
+
+#ffe7a0;
+
+
+}
+
+
+
+.graph-view.color-fill-tag {
+
+
+color:
+
+#e0c06b;
+
+
+}
+
+
+
+.graph-view.color-fill-unresolved {
+
+
+color:
+
+#76582d;
+
+
+}
+
+
+
+.graph-view.color-fill-attachment {
+
+
+color:
+
+#a77b38;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   GOLD RELIC NODES
+   LIGHTWEIGHT GLOW
+   ===================================================== */
+
+
+.graph-view .node {
+
+
+filter:
+
+drop-shadow(
+0 0 5px rgba(184,150,74,.45)
+);
+
+
+transition:
+
+filter .2s ease,
+transform .2s ease;
+
+
+}
+
+
+
+
+
+/* Hover */
+
+
+.graph-view .node:hover {
+
+
+transform:
+
+scale(1.12);
+
+
+filter:
+
+drop-shadow(
+0 0 12px rgba(255,225,140,.75)
+);
+
+
+}
+
+
+
+
+
+/* Selected node */
+
+
+.graph-view .node.is-focused {
+
+
+transform:
+
+scale(1.25);
+
+
+filter:
+
+drop-shadow(
+0 0 20px rgba(255,245,190,.85)
+);
+
+
+}
+
+
+
+
+
+/* =====================================================
+   GOLDEN CONNECTIONS
+   ===================================================== */
+
+
+.graph-view .link {
+
+
+stroke:
+
+rgba(230,190,90,.30);
+
+
+stroke-width:
+
+1.2px;
+
+
+}
+
+
+
+
+
+.graph-view .link:hover {
+
+
+stroke:
+
+rgba(255,235,150,.85);
+
+
+stroke-width:
+
+2px;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   SEARCH RESULT
+   ===================================================== */
+
+
+.graph-view .search-result {
+
+
+filter:
+
+drop-shadow(
+0 0 15px rgba(255,245,190,.85)
+);
+
+
+}
+
+
+
+
+
+/* Dim unrelated notes */
+
+
+.graph-view .dimmed {
+
+
+opacity:
+
+0.15;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   GRAPH LABELS
+   ANCIENT MANUSCRIPT
+   ===================================================== */
+
+
+.graph-view .label {
+
+
+color:
+
+#e4c982;
+
+
+font-family:
+
+"Cinzel",
+serif;
+
+
+text-shadow:
+
+0 3px 12px black;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   GRAPH CONTROL PANEL
+   ===================================================== */
+
+
+.graph-controls {
+
+
+background:
+
+rgba(12,10,8,.92);
+
+
+border:
+
+1px solid rgba(205,183,131,.25);
+
+
+border-radius:
+
+14px;
+
+
+box-shadow:
+
+0 15px 45px rgba(0,0,0,.55);
+
+
+}
+
+
+
+
+
+.graph-controls-button {
+
+
+color:
+
+#cdb783!important;
+
+
+}
+
+
+
+.graph-controls-button:hover {
+
+
+background:
+
+rgba(184,150,74,.12);
+
+
+}
+/* =====================================================
+   17 - STATUS BAR
+   ROYAL FOOTER
+   ===================================================== */
+
+
+.status-bar {
+
+
+background:
+
+#0e0d0b!important;
+
+
+color:
+
+var(--sanctuary-muted);
+
+
+border-top:
+
+1px solid rgba(184,150,74,.12);
+
+
+}
+
+
+
+
+
+/* =====================================================
+   18 - COMMAND PALETTE
+   ANCIENT SCROLL PANEL
+   ===================================================== */
+
+
+.prompt {
+
+
+background:
+
+#191714;
+
+
+border:
+
+1px solid rgba(184,150,74,.22);
+
+
+border-radius:
+
+12px;
+
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.65);
+
+
+}
+
+
+
+
+
+.prompt-input {
+
+
+color:
+
+var(--sanctuary-gold-soft);
+
+
+}
+
+
+
+
+
+.prompt-item {
+
+
+color:
+
+var(--sanctuary-text);
+
+
+}
+
+
+
+
+
+.prompt-item.is-selected {
+
+
+background:
+
+rgba(184,150,74,.12);
+
+
+color:
+
+var(--sanctuary-gold-bright);
+
+
+}
+
+
+
+
+
+/* =====================================================
+   19 - SCROLLBAR
+   ANCIENT GOLDEN METAL
+   ===================================================== */
+
+
+::-webkit-scrollbar {
+
+
+width:
+
+9px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-track {
+
+
+background:
+
+#0e0d0b;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+background:
+
+rgba(184,150,74,.30);
+
+
+border-radius:
+
+10px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb:hover {
+
+
+background:
+
+rgba(205,183,131,.55);
+
+
+}
+/* =====================================================
+   20 - FINAL SAFE TRANSITIONS
+   POLISHED ARCHIVE EXPERIENCE
+   ===================================================== */
+
+
+/* Visual-only transitions */
+
+
+.tag,
+.clickable-icon,
+.workspace-tab-header {
+
+
+transition:
+
+
+background .15s ease,
+color .15s ease;
+
+
+}
+
+
+
+/* Graph animation */
+
+
+.graph-view .node {
+
+
+transition:
+
+
+filter .2s ease,
+transform .2s ease;
+
+
+}
+/* =====================================================
+   FORGOTTEN GOLDEN SANCTUARY
+   COMPLETE LIGHT MODE
+   PARCHMENT GLASS + DARK GOLD READABILITY
+   ===================================================== */
+
+
+/* =========================
+   LIGHT VARIABLES
+   ========================= */
+
+.theme-light {
+
+--sanctuary-light-bg:
+#e7decc;
+
+--sanctuary-paper:
+#f5f0e6;
+
+--sanctuary-panel:
+rgba(245,240,230,.82);
+
+--sanctuary-border:
+rgba(130,90,35,.25);
+
+--sanctuary-black:
+#211b14;
+
+--sanctuary-gold-dark:
+#60400d;
+
+--sanctuary-gold:
+#8b641b;
+
+}
+
+
+/* =========================
+   MAIN BACKGROUND
+   ========================= */
+
+.theme-light .app-container {
+
+background:
+
+radial-gradient(
+circle at 20% 20%,
+rgba(184,150,74,.12),
+transparent 45%
+),
+
+linear-gradient(
+135deg,
+#eee5d3,
+#d9ccb3
+);
+
+}
+
+
+
+/* =========================
+   GLASS PANELS
+   ========================= */
+
+.theme-light .workspace-split,
+.theme-light .workspace-leaf,
+.theme-light .workspace-ribbon,
+.theme-light .side-dock-ribbon,
+.theme-light .nav-files-container {
+
+
+background:
+
+rgba(245,240,230,.65)!important;
+
+
+backdrop-filter:
+
+blur(18px);
+
+
+-webkit-backdrop-filter:
+
+blur(18px);
+
+
+border-color:
+
+var(--sanctuary-border);
+
+}
+
+
+
+/* =========================
+   READING MODE
+   ========================= */
+
+.theme-light .workspace-leaf-content {
+
+
+background:
+
+rgba(245,240,230,.55);
+
+}
+
+
+
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view {
+
+
+background:
+
+rgba(250,246,238,.75)!important;
+
+
+color:
+
+#211b14!important;
+
+
+}
+
+
+
+/* Reading text */
+
+.theme-light .markdown-preview-view {
+
+
+font-size:
+
+17px;
+
+
+line-height:
+
+1.85;
+
+
+font-weight:
+
+520;
+
+
+color:
+
+#211b14!important;
+
+
+}
+
+
+/* Paragraph */
+
+.theme-light .markdown-preview-view p {
+
+
+color:
+
+#211b14!important;
+
+
+}
+
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+
+.theme-light h1 {
+
+
+color:
+
+#5b3908!important;
+
+
+font-weight:
+
+900!important;
+
+
+}
+
+
+
+.theme-light h2 {
+
+
+color:
+
+#68450d!important;
+
+
+font-weight:
+
+800!important;
+
+
+}
+
+
+
+.theme-light h3 {
+
+
+color:
+
+#80601c!important;
+
+
+font-weight:
+
+800!important;
+
+
+}
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+
+.theme-light a {
+
+
+color:
+
+#765015!important;
+
+
+font-weight:
+
+700;
+
+
+}
+
+
+
+.theme-light a:hover {
+
+
+color:
+
+#a67620!important;
+
+
+}
+
+
+
+/* =========================
+   FILE EXPLORER
+   ========================= */
+
+
+.theme-light .nav-folder-title,
+.theme-light .nav-file-title {
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+650!important;
+
+
+}
+
+
+
+.theme-light .nav-folder-title:hover,
+.theme-light .nav-file-title:hover {
+
+
+background:
+
+rgba(184,150,74,.18)!important;
+
+
+color:
+
+#69440b!important;
+
+
+}
+
+
+
+.theme-light .nav-file-title.is-active {
+
+
+background:
+
+rgba(184,150,74,.25)!important;
+
+
+color:
+
+#513000!important;
+
+
+font-weight:
+
+800!important;
+
+
+}
+
+
+
+/* =========================
+   TABS
+   ========================= */
+
+
+.theme-light .workspace-tab-header-container {
+
+
+background:
+
+rgba(220,210,190,.65)!important;
+
+
+}
+
+
+
+.theme-light .workspace-tab-header {
+
+
+background:
+
+rgba(245,240,230,.55)!important;
+
+
+color:
+
+#392b1b!important;
+
+
+font-weight:
+
+650;
+
+
+}
+
+
+
+.theme-light .workspace-tab-header.is-active {
+
+
+background:
+
+rgba(184,150,74,.25)!important;
+
+
+color:
+
+#513000!important;
+
+
+}
+
+
+
+/* =========================
+   TABLES
+   DARK GOLD CONTRAST
+   ========================= */
+
+
+.theme-light table,
+.theme-light .dataview.table-view-table {
+
+
+background:
+
+#f5f0e6!important;
+
+
+border:
+
+1px solid rgba(120,80,20,.35)!important;
+
+
+}
+
+
+
+.theme-light th {
+
+
+background:
+
+rgba(184,150,74,.25)!important;
+
+
+color:
+
+#2b1c08!important;
+
+
+font-weight:
+
+900!important;
+
+
+}
+
+
+
+.theme-light td {
+
+
+background:
+
+rgba(250,246,238,.95)!important;
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+650!important;
+
+
+}
+
+
+
+.theme-light td:first-child {
+
+
+color:
+
+#5b3908!important;
+
+
+font-weight:
+
+800!important;
+
+
+}
+
+
+
+.theme-light tr:hover td {
+
+
+background:
+
+rgba(184,150,74,.18)!important;
+
+
+color:
+
+#1b1308!important;
+
+
+}
+
+
+
+/* =========================
+   DATAVIEW
+   ========================= */
+
+
+.theme-light .dataview.table-view-table th {
+
+
+color:
+
+#2b1c08!important;
+
+
+}
+
+
+
+.theme-light .dataview.table-view-table td {
+
+
+color:
+
+#211b14!important;
+
+
+}
+
+
+
+/* =========================
+   PROPERTIES
+   ========================= */
+
+
+.theme-light .metadata-container {
+
+
+background:
+
+rgba(245,240,230,.95)!important;
+
+
+border:
+
+1px solid rgba(120,80,20,.35);
+
+
+border-radius:
+
+12px;
+
+
+}
+
+
+
+.theme-light .metadata-property-key {
+
+
+color:
+
+#62400b!important;
+
+
+font-weight:
+
+900!important;
+
+
+}
+
+
+
+.theme-light .metadata-property-value {
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+650!important;
+
+
+}
+
+
+
+/* =========================
+   YAML FRONTMATTER
+   ========================= */
+
+
+.theme-light .frontmatter,
+.theme-light .frontmatter-container,
+.theme-light .cm-hmd-frontmatter {
+
+
+background:
+
+#f5f0e6!important;
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+650!important;
+
+
+}
+
+
+
+/* YAML keys */
+
+.theme-light .cm-atom,
+.theme-light .cm-hmd-frontmatter-key {
+
+
+color:
+
+#79520d!important;
+
+
+font-weight:
+
+900!important;
+
+
+}
+
+
+
+/* YAML values */
+
+.theme-light .cm-string,
+.theme-light .cm-hmd-frontmatter-value {
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+650!important;
+
+
+}
+
+
+
+/* =========================
+   CODE BLOCKS
+   ========================= */
+
+
+.theme-light pre {
+
+
+background:
+
+#eee4d2!important;
+
+
+border:
+
+1px solid rgba(120,80,20,.35);
+
+
+}
+
+
+
+.theme-light pre code {
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+600;
+
+
+font-family:
+
+"JetBrains Mono",
+monospace;
+
+
+}
+
+
+
+.theme-light :not(pre)>code {
+
+
+background:
+
+rgba(184,150,74,.18)!important;
+
+
+color:
+
+#5b3908!important;
+
+
+font-weight:
+
+750;
+
+
+}
+
+
+
+/* =========================
+   CALLOUTS
+   ========================= */
+
+
+.theme-light .callout {
+
+
+background:
+
+rgba(245,240,230,.85);
+
+
+border:
+
+1px solid rgba(130,90,35,.30);
+
+
+}
+
+
+
+.theme-light .callout-title {
+
+
+color:
+
+#60400d!important;
+
+
+font-weight:
+
+900;
+
+
+}
+
+
+
+.theme-light .callout-content {
+
+
+color:
+
+#211b14!important;
+
+
+font-weight:
+
+600;
+
+
+}
+
+
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+
+.theme-light ::-webkit-scrollbar-thumb {
+
+
+background:
+
+rgba(130,90,35,.45);
+
+
+}
