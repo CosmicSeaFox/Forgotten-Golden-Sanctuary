@@ -7,82 +7,150 @@
 
 A handcrafted Obsidian theme inspired by forgotten libraries, ancient sanctuaries, and warm golden archives.
 
-Designed for **comfortable long-form reading**, focused writing, and immersive knowledge management with carefully tuned typography, contrast, and atmospheric colors.
-
----
-
-# ☕ Support Forgotten Golden Sanctuary
-
-If you enjoy this theme and want to support future development, you can buy me a coffee.
-
-| ☕ Coffee Support |
-| :---: |
-| <a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217"></a> |
-
-Your support helps with:
-
-- 🎨 Theme improvements
-- 🐛 Bug fixes
-- ✨ New features
-- 📱 Mobile optimization
-- 🏛 Long-term maintenance
+Designed for comfortable reading, focused writing, and immersive knowledge management.
 
 ---
 
 # Preview
 
-## Dark & Light Mode
-
-| Dark Mode | Light Mode |
-|------------|------------|
-| ![Dark Mode](screenshots/dark.png) | ![Light Mode](screenshots/light.png) |
+![Forgotten Golden Sanctuary](screenshot.png)
 
 ---
 
-## Graph View
+# Support ☕
 
-![Graph View](screenshots/graph.png)
+If you enjoy this theme and want to support future development:
 
----
-
-## Reading & Writing
-
-| Reading Mode | Source Mode |
-|--------------|-------------|
-| ![Reading Mode](screenshots/reading.png) | ![Source Mode](screenshots/source.png) |
+<a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank">
+<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217">
+</a>
 
 ---
 
-## Tables • Properties • Code
+# Screenshots
 
-| Tables | Properties | Code Blocks |
-|--------|------------|-------------|
-| ![Tables](screenshots/table.png) | ![Properties](screenshots/properties.png) | ![Code](screenshots/code.png) |
+| View | Preview |
+|---|---|
+| Dark Mode | ![Dark](screenshots/dark.png) |
+| Light Mode | ![Light](screenshots/light.png) |
+| Reading Mode | ![Reading](screenshots/reading.png) |
+| Source Mode | ![Source](screenshots/source.png) |
+| Graph View | ![Graph](screenshots/graph.png) |
+| Tables | ![Tables](screenshots/table.png) |
+| Properties | ![Properties](screenshots/properties.png) |
+| Code Blocks | ![Code](screenshots/code.png) |
 
 ---
 
 # Features
 
 | Feature | Description |
-|---------|-------------|
-| 🌙 Dark Mode | Warm obsidian archive atmosphere with antique gold accents |
-| ☀️ Light Mode | Soft parchment interface with readable dark text |
-| 📖 Reading Mode | Tuned for comfortable long-form reading |
-| ✍️ Source Mode | Clean writing and editing experience |
-| 🏛 Typography | Cinzel headings with Inter body text |
-| 💻 Code Blocks | Readable CSS, JSON, YAML and Markdown blocks |
-| 📑 Properties | Clear metadata and YAML presentation |
-| 📊 Tables | Improved contrast for rows, columns and headers |
-| ✨ Glass UI | Soft translucent panels in Light Mode |
-| 📂 File Explorer | Archive-style navigation |
-| 📝 Callouts | Custom Lore, Journal, Artifact, Secret, Quest and Research styles |
-| 🕸 Graph View | Golden constellation inspired graph styling |
-| 🏷 Tags | Rounded golden archive badges |
-| ☑ Tasks | Custom golden checklist styling |
-| 🔍 Command Palette | Warm archive search interface |
-| 📜 Blockquotes | Ancient manuscript appearance |
-| 🖱 Scrollbars | Minimal golden scrollbar design |
-| 📱 Mobile Support | Responsive spacing and readable layouts |
+|---|---|
+| 🌙 Dark Mode | Warm archive atmosphere |
+| ☀️ Light Mode | Soft parchment interface |
+| 📖 Reading Mode | Long-form reading focused |
+| ✍️ Source Mode | Clean writing experience |
+| 🏛 Typography | Cinzel + Inter fonts |
+| 📑 Properties | Clear metadata styling |
+| 📊 Tables | Improved readability |
+| 💻 Code Blocks | Clean code presentation |
+| 📝 Callouts | Custom archive styles |
+| 🕸 Graph View | Golden constellation design |
+| 🏷 Tags | Golden archive badges |
+| ☑ Tasks | Custom checkbox styling |
+| 📱 Mobile | Responsive layout |
+
+---
+
+# Installation
+
+1. Download this repository.
+
+2. Copy the theme folder:
+
+```
+
+Forgotten-Golden-Sanctuary
+
+```
+
+into:
+
+```
+
+YourVault/.obsidian/themes/
+
+```
+
+3. Open Obsidian:
+
+```
+
+Settings → Appearance → Themes
+
+```
+
+4. Select:
+
+```
+
+Forgotten Golden Sanctuary
+
+```
+
+---
+
+# Folder Structure
+
+```
+
+Forgotten-Golden-Sanctuary/
+
+├── theme.css
+├── manifest.json
+├── README.md
+├── LICENSE
+├── screenshot.png
+│
+└── screenshots/
+├── dark.png
+├── light.png
+├── reading.png
+├── source.png
+├── graph.png
+├── table.png
+├── properties.png
+└── code.png
+
+```
+
+---
+
+# Fonts
+
+| Purpose | Font |
+|---|---|
+| Body | Inter |
+| Headings | Cinzel |
+| Title | Cinzel Decorative |
+| Code | JetBrains Mono |
+
+---
+
+# Compatibility
+
+| Feature | Status |
+|---|---|
+| Obsidian Desktop | ✅ |
+| Obsidian Mobile | ✅ |
+| Reading Mode | ✅ |
+| Source Mode | ✅ |
+| Live Preview | ✅ |
+| Graph View | ✅ |
+| Properties | ✅ |
+| Tables | ✅ |
+| Callouts | ✅ |
+| Code Blocks | ✅ |
 
 ---
 
@@ -95,178 +163,43 @@ Forgotten Golden Sanctuary focuses on:
 - Clear typography
 - Balanced contrast
 - Minimal distractions
-- Focused writing sessions
 - Warm fantasy archive atmosphere
 
-Built for:
+Created for:
 
 - Writers
 - Researchers
 - Students
 - Knowledge keepers
-- Long-form note takers
 
 ---
 
-# Screenshot Files
+# Dark Mode
 
-```
-screenshots/
-
-├── dark.png
-├── light.png
-├── reading.png
-├── source.png
-├── graph.png
-├── table.png
-├── properties.png
-└── code.png
-```
-
----
-
-# Installation
-
-## Manual Installation
-
-1. Download this repository.
-
-2. Copy the theme folder into:
-
-```
-YourVault/.obsidian/themes/Forgotten Golden Sanctuary/
-```
-
-3. Open Obsidian.
-
-4. Go to:
-
-```
-Settings
-→ Appearance
-→ Themes
-```
-
-5. Select:
-
-```
-Forgotten Golden Sanctuary
-```
-
----
-
-# Folder Structure
-
-```
-Forgotten Golden Sanctuary/
-
-├── theme.css
-├── manifest.json
-├── README.md
-├── LICENSE
-│
-└── screenshots/
-
-    ├── dark.png
-    ├── light.png
-    ├── reading.png
-    ├── source.png
-    ├── graph.png
-    ├── table.png
-    ├── properties.png
-    └── code.png
-```
-
----
-
-# Recommended Fonts
-
-| Purpose | Font |
-|---------|------|
-| Body Text | Inter |
-| Headings | Cinzel |
-| Main Title | Cinzel Decorative |
-| Code | JetBrains Mono |
-
----
-
-# Recommended Plugins
-
-| Plugin | Support |
-|--------|---------|
-| Dataview | ✅ |
-| Tasks | ✅ |
-| Templater | ✅ |
-| Calendar | ✅ |
-| Kanban | ✅ |
-| Charts | ✅ |
-| Community Plugins | Compatible |
-
----
-
-# Compatibility
-
-| Feature | Status |
-|---------|--------|
-| Obsidian Desktop | ✅ |
-| Obsidian Mobile | ✅ |
-| Reading Mode | ✅ |
-| Source Mode | ✅ |
-| Live Preview | ✅ |
-| Graph View | ✅ |
-| Properties | ✅ |
-| YAML Frontmatter | ✅ |
-| Dataview | ✅ |
-| Callouts | ✅ |
-| Tables | ✅ |
-| Code Blocks | ✅ |
-
----
-
-# Theme Design
-
-## Dark Mode
-
-- Obsidian inspired backgrounds
+- Deep archive backgrounds
 - Warm parchment text
-- Antique gold highlights
-- Bronze accents
-- Low glare reading environment
+- Antique gold accents
+- Low-glare reading environment
 
-## Light Mode
+# Light Mode
 
 - Soft parchment surfaces
 - Dark readable text
-- Golden archive highlights
+- Golden highlights
 - Comfortable contrast
-- Reduced brightness compared with standard light themes
 
 ---
 
 # Credits
 
-Fonts used:
+Fonts:
 
 - Inter
 - Cinzel
 - Cinzel Decorative
 - JetBrains Mono
 
-Created for the Obsidian community.
-
----
-
-# ☕ Support The Project
-
-Forgotten Golden Sanctuary is a free open-source Obsidian theme created for the community.
-
-If you enjoy using it and want to support future development:
-
-| ☕ Buy Me A Coffee |
-| :---: |
-| <a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217"></a> |
-
-Thank you for supporting independent theme development ❤️
+Made for the Obsidian community.
 
 ---
 
@@ -274,6 +207,5 @@ Thank you for supporting independent theme development ❤️
 
 MIT License
 
----
-
 Made with ❤️ for writers, researchers, and knowledge keepers.
+```
