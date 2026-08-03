@@ -11,6 +11,26 @@ Designed for **comfortable long-form reading**, focused writing, and immersive k
 
 ---
 
+# ☕ Support Forgotten Golden Sanctuary
+
+If this theme improves your Obsidian experience, you can support the project with a coffee.
+
+Your support helps with:
+
+- 🎨 Theme improvements
+- 🐛 Bug fixes
+- ✨ New features
+- 📱 Mobile improvements
+- 🏛 Long-term maintenance
+
+<a href="https://www.buymeacoffee.com/CosmicSeaFox">
+<img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=CosmicSeaFox&button_colour=B8964A&font_colour=FFFFFF&font_family=Inter&outline_colour=000000&coffee_colour=FFDD00" 
+alt="Buy Me A Coffee" 
+height="50">
+</a>
+
+---
+
 # Preview
 
 ## Dark & Light Mode
@@ -82,13 +102,20 @@ Forgotten Golden Sanctuary focuses on:
 - Focused writing sessions
 - Warm fantasy archive atmosphere
 
-Built for writers, researchers, students, and knowledge keepers.
+Built for:
+
+- Writers
+- Researchers
+- Students
+- Knowledge keepers
+- Long-form note takers
 
 ---
 
 # Screenshot Files
 
 ```
+
 screenshots/
 
 ├── dark.png
@@ -99,6 +126,7 @@ screenshots/
 ├── table.png
 ├── properties.png
 └── code.png
+
 ```
 
 ---
@@ -112,7 +140,9 @@ screenshots/
 2. Copy the theme folder into:
 
 ```
+
 YourVault/.obsidian/themes/Forgotten Golden Sanctuary/
+
 ```
 
 3. Open Obsidian.
@@ -120,15 +150,19 @@ YourVault/.obsidian/themes/Forgotten Golden Sanctuary/
 4. Go to:
 
 ```
+
 Settings
 → Appearance
 → Themes
+
 ```
 
 5. Select:
 
 ```
+
 Forgotten Golden Sanctuary
+
 ```
 
 ---
@@ -136,6 +170,7 @@ Forgotten Golden Sanctuary
 # Folder Structure
 
 ```
+
 Forgotten Golden Sanctuary/
 
 ├── theme.css
@@ -145,14 +180,17 @@ Forgotten Golden Sanctuary/
 │
 └── screenshots/
 
-    ├── dark.png
-    ├── light.png
-    ├── reading.png
-    ├── source.png
-    ├── graph.png
-    ├── table.png
-    ├── properties.png
-    └── code.png
+```
+├── dark.png
+├── light.png
+├── reading.png
+├── source.png
+├── graph.png
+├── table.png
+├── properties.png
+└── code.png
+```
+
 ```
 
 ---
@@ -234,20 +272,27 @@ Created for the Obsidian community.
 
 ---
 
-# Support the Project ☕
+# ☕ Support the Project
 
-If you enjoy **Forgotten Golden Sanctuary** and it improves your Obsidian experience, you can support development.
+Forgotten Golden Sanctuary is a free open-source theme created for the Obsidian community.
+
+If you enjoy using it and want to support future development, you can buy me a coffee.
 
 Your support helps with:
 
-- Theme improvements
-- Bug fixes
-- New features
-- Long-term maintenance
+- 🎨 Theme improvements
+- 🐛 Bug fixes
+- ✨ New features
+- 📱 Mobile optimization
+- 🏛 Long-term maintenance
 
-☕ Buy me a coffee:
+<a href="https://www.buymeacoffee.com/CosmicSeaFox">
+<img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=CosmicSeaFox&button_colour=B8964A&font_colour=FFFFFF&font_family=Inter&outline_colour=000000&coffee_colour=FFDD00" 
+alt="Buy Me A Coffee" 
+height="50">
+</a>
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow)](https://www.buymeacoffee.com/CosmicSeaFox)
+Thank you for supporting independent theme development ❤️
 
 ---
 
