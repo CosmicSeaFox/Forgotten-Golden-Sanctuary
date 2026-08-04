@@ -166,7 +166,7 @@ linear-gradient(
 
 background:
 
-transparent!important;
+transparent;
 
 
 }
@@ -241,7 +241,7 @@ linear-gradient(
 145deg,
 #1b1915,
 #171512
-)!important;
+);
 
 
 }
@@ -428,7 +428,7 @@ serif;
 
 color:
 
-var(--sanctuary-gold-soft)!important;
+var(--sanctuary-gold-soft);
 
 
 font-size:
@@ -460,7 +460,7 @@ padding-bottom:
 
 color:
 
-#d1c29c!important;
+#d1c29c;
 
 
 }
@@ -477,7 +477,7 @@ color:
 
 color:
 
-var(--sanctuary-gold)!important;
+var(--sanctuary-gold);
 
 
 }
@@ -496,7 +496,7 @@ var(--sanctuary-gold)!important;
 
 color:
 
-#bda875!important;
+#bda875;
 
 
 transition:
@@ -517,7 +517,7 @@ color .15s ease;
 
 color:
 
-var(--sanctuary-gold-bright)!important;
+var(--sanctuary-gold-bright);
 
 
 text-shadow:
@@ -563,7 +563,7 @@ color:
 
 border-left:
 
-2px solid var(--sanctuary-gold-soft)!important;
+2px solid var(--sanctuary-gold-soft);
 
 
 }
@@ -578,12 +578,12 @@ border-left:
 
 background:
 
-#0e0d0b!important;
+#0e0d0b;
 
 
 color:
 
-var(--sanctuary-gold-soft)!important;
+var(--sanctuary-gold-soft);
 
 
 }
@@ -595,7 +595,7 @@ var(--sanctuary-gold-soft)!important;
 
 color:
 
-var(--sanctuary-gold-soft)!important;
+var(--sanctuary-gold-soft);
 
 
 font-family:
@@ -624,7 +624,7 @@ letter-spacing:
 
 background:
 
-#100f0d!important;
+#100f0d;
 
 
 border-bottom:
@@ -644,12 +644,12 @@ border-bottom:
 
 background:
 
-#171512!important;
+#171512;
 
 
 color:
 
-var(--sanctuary-text-soft)!important;
+var(--sanctuary-text-soft);
 
 
 border-bottom:
@@ -676,12 +676,12 @@ color .15s ease;
 
 background:
 
-rgba(184,150,74,.06)!important;
+rgba(184,150,74,.06);
 
 
 color:
 
-var(--sanctuary-gold-soft)!important;
+var(--sanctuary-gold-soft);
 
 
 }
@@ -696,12 +696,12 @@ var(--sanctuary-gold-soft)!important;
 
 background:
 
-#211c14!important;
+#211c14;
 
 
 color:
 
-var(--sanctuary-gold-soft)!important;
+var(--sanctuary-gold-soft);
 
 
 border-bottom:
@@ -722,7 +722,7 @@ border-bottom:
 
 color:
 
-var(--sanctuary-gold)!important;
+var(--sanctuary-gold);
 
 
 transition:
@@ -750,7 +750,7 @@ border-radius:
 
 color:
 
-var(--sanctuary-gold-bright)!important;
+var(--sanctuary-gold-bright);
 
 
 }
@@ -839,7 +839,7 @@ rgba(184,150,74,.12);
 
 color:
 
-var(--sanctuary-gold-soft)!important;
+var(--sanctuary-gold-soft);
 
 
 }
@@ -885,7 +885,7 @@ var(--sanctuary-gold-soft);
 .nav-file {
 
 
-transition:none!important;
+transition:none;
 
 
 }
@@ -900,12 +900,12 @@ transition:none!important;
 
 margin-left:
 
-0!important;
+0;
 
 
 padding-left:
 
-0!important;
+0;
 
 
 }
@@ -1168,7 +1168,7 @@ border-radius:
 
 width:
 
-100%!important;
+100%;
 
 
 background:
@@ -1210,12 +1210,12 @@ hidden;
 
 background:
 
-#17140f!important;
+#17140f;
 
 
 color:
 
-#d8cdb5!important;
+#d8cdb5;
 
 
 font-family:
@@ -1253,12 +1253,12 @@ border-bottom:
 
 background:
 
-#17140f!important;
+#17140f;
 
 
 color:
 
-#d8cdb5!important;
+#d8cdb5;
 
 
 padding:
@@ -1285,7 +1285,7 @@ border-bottom:
 
 color:
 
-#d8cdb5!important;
+#d8cdb5;
 
 
 }
@@ -1302,12 +1302,12 @@ color:
 
 background:
 
-rgba(184,150,74,.06)!important;
+rgba(184,150,74,.06);
 
 
 color:
 
-#ead79a!important;
+#ead79a;
 
 
 }
@@ -1322,7 +1322,7 @@ color:
 
 width:
 
-100%!important;
+100%;
 
 
 background:
@@ -1354,12 +1354,12 @@ collapse;
 
 background:
 
-#17140f!important;
+#17140f;
 
 
 color:
 
-#d8cdb5!important;
+#d8cdb5;
 
 
 font-family:
@@ -1397,12 +1397,12 @@ border:
 
 background:
 
-#17140f!important;
+#17140f;
 
 
 color:
 
-#d8cdb5!important;
+#d8cdb5;
 
 
 padding:
@@ -1429,7 +1429,7 @@ border:
 
 color:
 
-#d8cdb5!important;
+#d8cdb5;
 
 
 }
@@ -1684,7 +1684,7 @@ linear-gradient(
 #080706,
 #17120b,
 #050403
-)!important;
+);
 
 
 }
@@ -1987,7 +1987,7 @@ box-shadow:
 
 color:
 
-#cdb783!important;
+#cdb783;
 
 
 }
@@ -2014,7 +2014,7 @@ rgba(184,150,74,.12);
 
 background:
 
-#0e0d0b!important;
+#0e0d0b;
 
 
 color:
@@ -2290,7 +2290,7 @@ linear-gradient(
 
 background:
 
-rgba(245,240,230,.65)!important;
+rgba(245,240,230,.65);
 
 
 backdrop-filter:
@@ -2332,12 +2332,12 @@ rgba(245,240,230,.55);
 
 background:
 
-rgba(250,246,238,.75)!important;
+rgba(250,246,238,.75);
 
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 }
@@ -2366,7 +2366,7 @@ font-weight:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 }
@@ -2379,7 +2379,7 @@ color:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 }
@@ -2396,12 +2396,12 @@ color:
 
 color:
 
-#5b3908!important;
+#5b3908;
 
 
 font-weight:
 
-900!important;
+900;
 
 
 }
@@ -2413,12 +2413,12 @@ font-weight:
 
 color:
 
-#68450d!important;
+#68450d;
 
 
 font-weight:
 
-800!important;
+800;
 
 
 }
@@ -2430,12 +2430,12 @@ font-weight:
 
 color:
 
-#80601c!important;
+#80601c;
 
 
 font-weight:
 
-800!important;
+800;
 
 
 }
@@ -2451,7 +2451,7 @@ font-weight:
 
 color:
 
-#765015!important;
+#765015;
 
 
 font-weight:
@@ -2468,7 +2468,7 @@ font-weight:
 
 color:
 
-#a67620!important;
+#a67620;
 
 
 }
@@ -2486,12 +2486,12 @@ color:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
 
-650!important;
+650;
 
 
 }
@@ -2504,12 +2504,12 @@ font-weight:
 
 background:
 
-rgba(184,150,74,.18)!important;
+rgba(184,150,74,.18);
 
 
 color:
 
-#69440b!important;
+#69440b;
 
 
 }
@@ -2521,17 +2521,17 @@ color:
 
 background:
 
-rgba(184,150,74,.25)!important;
+rgba(184,150,74,.25);
 
 
 color:
 
-#513000!important;
+#513000;
 
 
 font-weight:
 
-800!important;
+800;
 
 
 }
@@ -2548,7 +2548,7 @@ font-weight:
 
 background:
 
-rgba(220,210,190,.65)!important;
+rgba(220,210,190,.65);
 
 
 }
@@ -2560,12 +2560,12 @@ rgba(220,210,190,.65)!important;
 
 background:
 
-rgba(245,240,230,.55)!important;
+rgba(245,240,230,.55);
 
 
 color:
 
-#392b1b!important;
+#392b1b;
 
 
 font-weight:
@@ -2582,12 +2582,12 @@ font-weight:
 
 background:
 
-rgba(184,150,74,.25)!important;
+rgba(184,150,74,.25);
 
 
 color:
 
-#513000!important;
+#513000;
 
 
 }
@@ -2606,12 +2606,12 @@ color:
 
 background:
 
-#f5f0e6!important;
+#f5f0e6;
 
 
 border:
 
-1px solid rgba(120,80,20,.35)!important;
+1px solid rgba(120,80,20,.35);
 
 
 }
@@ -2623,17 +2623,17 @@ border:
 
 background:
 
-rgba(184,150,74,.25)!important;
+rgba(184,150,74,.25);
 
 
 color:
 
-#2b1c08!important;
+#2b1c08;
 
 
 font-weight:
 
-900!important;
+900;
 
 
 }
@@ -2645,17 +2645,17 @@ font-weight:
 
 background:
 
-rgba(250,246,238,.95)!important;
+rgba(250,246,238,.95);
 
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
 
-650!important;
+650;
 
 
 }
@@ -2667,12 +2667,12 @@ font-weight:
 
 color:
 
-#5b3908!important;
+#5b3908;
 
 
 font-weight:
 
-800!important;
+800;
 
 
 }
@@ -2684,12 +2684,12 @@ font-weight:
 
 background:
 
-rgba(184,150,74,.18)!important;
+rgba(184,150,74,.18);
 
 
 color:
 
-#1b1308!important;
+#1b1308;
 
 
 }
@@ -2706,7 +2706,7 @@ color:
 
 color:
 
-#2b1c08!important;
+#2b1c08;
 
 
 }
@@ -2718,7 +2718,7 @@ color:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 }
@@ -2735,7 +2735,7 @@ color:
 
 background:
 
-rgba(245,240,230,.95)!important;
+rgba(245,240,230,.95);
 
 
 border:
@@ -2757,12 +2757,12 @@ border-radius:
 
 color:
 
-#62400b!important;
+#62400b;
 
 
 font-weight:
 
-900!important;
+900;
 
 
 }
@@ -2774,12 +2774,12 @@ font-weight:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
 
-650!important;
+650;
 
 
 }
@@ -2798,17 +2798,17 @@ font-weight:
 
 background:
 
-#f5f0e6!important;
+#f5f0e6;
 
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
 
-650!important;
+650;
 
 
 }
@@ -2823,12 +2823,12 @@ font-weight:
 
 color:
 
-#79520d!important;
+#79520d;
 
 
 font-weight:
 
-900!important;
+900;
 
 
 }
@@ -2843,12 +2843,12 @@ font-weight:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
 
-650!important;
+650;
 
 
 }
@@ -2865,7 +2865,7 @@ font-weight:
 
 background:
 
-#eee4d2!important;
+#eee4d2;
 
 
 border:
@@ -2882,7 +2882,7 @@ border:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
@@ -2905,12 +2905,12 @@ monospace;
 
 background:
 
-rgba(184,150,74,.18)!important;
+rgba(184,150,74,.18);
 
 
 color:
 
-#5b3908!important;
+#5b3908;
 
 
 font-weight:
@@ -2949,7 +2949,7 @@ border:
 
 color:
 
-#60400d!important;
+#60400d;
 
 
 font-weight:
@@ -2966,7 +2966,7 @@ font-weight:
 
 color:
 
-#211b14!important;
+#211b14;
 
 
 font-weight:
