@@ -13,7 +13,7 @@ Designed for comfortable reading, focused writing, and immersive knowledge manag
 
 # Preview
 
-![Forgotten Golden Sanctuary](screenshot.png)
+![Forgotten Golden Sanctuary](screenshot.png?v=2)
 
 ---
 
