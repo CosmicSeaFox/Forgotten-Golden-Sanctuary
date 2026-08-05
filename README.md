@@ -25,6 +25,7 @@ If you enjoy this theme and want to support future development:
 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217">
 </a>
 
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cosmicseafox)
 ---
 
 # Screenshots
