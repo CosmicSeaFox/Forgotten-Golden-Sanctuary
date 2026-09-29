@@ -12,11 +12,11 @@ Built for **comfortable reading, focused writing, and immersive knowledge manage
 
 ### Dark Mode
 
-![Forgotten Golden Sanctuary — Dark Mode](./dark.png)
+![Forgotten Golden Sanctuary — Dark Mode](screenshots./dark.png)
 
 ### Light Mode
 
-![Forgotten Golden Sanctuary — Light Mode](./light.png)
+![Forgotten Golden Sanctuary — Light Mode](screenshots./light.png)
 
 > Screenshots are from the theme showcase vault.
 
