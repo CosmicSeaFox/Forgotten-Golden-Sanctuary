@@ -12,11 +12,11 @@ Built for **comfortable reading, focused writing, and immersive knowledge manage
 
 ### Dark Mode
 
-![Forgotten Golden Sanctuary — Dark Mode](screenshots./dark.png)
+![Dark Mode](./screenshots/dark.png)
 
 ### Light Mode
 
-![Forgotten Golden Sanctuary — Light Mode](screenshots./light.png)
+![Light Mode](./screenshots/light.png)
 
 > Screenshots are from the theme showcase vault.
 
@@ -124,7 +124,7 @@ Once available through the Obsidian Community Themes:
 
 ### Manual Installation
 
-Download the latest release and place the theme files inside:
+Download the latest release and place the theme folder inside:
 
 ```text
 YourVault/.obsidian/themes/Forgotten Golden Sanctuary/
