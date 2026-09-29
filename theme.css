@@ -1,2994 +1,2018 @@
 /*
 =====================================================
-
 FORGOTTEN GOLDEN SANCTUARY
-
 Dark Fantasy Archive Theme
 Obsidian Community Theme
-
 Comfort Reading Edition
 
 =====================================================
 */
 
+:root {
+  --fgs-font-display: "Cinzel Decorative", "Cinzel", "Trajan Pro", Georgia, "Times New Roman", serif;
+  --fgs-font-heading: "Cinzel", "Trajan Pro", Georgia, "Times New Roman", serif;
+  --fgs-font-ui: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --fgs-font-text: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --fgs-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --fgs-radius-sm: 6px;
+  --fgs-radius-md: 10px;
+  --fgs-radius-lg: 14px;
+
+  --fgs-reading-max-width: 1080px;
+  --fgs-transition: background-color .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+/* =====================================================
+   DARK SANCTUARY TOKENS
+   ===================================================== */
 
 .theme-dark {
-
-
-/* =====================
-   SANCTUARY COLORS
-   ===================== */
-
-
---sanctuary-bg:
-#12110f;
-
-
---sanctuary-surface:
-#191714;
-
-
---sanctuary-panel:
-#211d18;
-
-
-
-/* GOLD PALETTE */
-
-
---sanctuary-gold:
-#b8964a;
-
-
---sanctuary-gold-soft:
-#cdb783;
-
-
---sanctuary-gold-bright:
-#ead79a;
-
-
---sanctuary-bronze:
-#80653b;
-
-
-
-/* TEXT PALETTE */
-
-
---sanctuary-text:
-#c2baa8;
-
-
---sanctuary-text-soft:
-#a99f8d;
-
-
---sanctuary-muted:
-#81796c;
-
-
-
-/* OBSIDIAN CORE */
-
-
---background-primary:
-var(--sanctuary-bg);
-
-
---background-secondary:
-#0e0d0b;
-
-
---background-secondary-alt:
-var(--sanctuary-surface);
-
-
-
---background-modifier-border:
-
-rgba(184,150,74,.14);
-
-
-
-/* TEXT */
-
-
---text-normal:
-
-var(--sanctuary-text);
-
-
---text-muted:
-
-var(--sanctuary-muted);
-
-
---text-accent:
-
-var(--sanctuary-gold);
-
-
-
-/* INTERACTION */
-
-
---interactive-accent:
-
-var(--sanctuary-gold);
-
-
---interactive-hover:
-
-rgba(184,150,74,.10);
-
-
+  color-scheme: dark;
+
+  /* Large atmosphere surfaces (gradient allowed here only) */
+  --fgs-app-bg: radial-gradient(circle at 20% 80%, rgba(184,150,74,.035), transparent 45%), linear-gradient(180deg, #151310, #0f0e0c);
+  --fgs-reading-bg: linear-gradient(145deg, #1b1915, #171512);
+  --fgs-graph-bg: radial-gradient(circle at center, rgba(184,150,74,.08), transparent 35%), linear-gradient(160deg, #080706, #17120b, #050403);
+
+  /* Solid surfaces */
+  --fgs-bg: #12110f;
+  --fgs-bg-alt: #0e0d0b;
+  --fgs-surface: #191714;
+  --fgs-panel: #211d18;
+  --fgs-raised: #262019;
+  --fgs-sidebar-bg: #151310;
+  --fgs-ribbon-bg: #100e0c;
+  --fgs-titlebar-bg: #0e0d0b;
+  --fgs-status-bg: #0e0d0b;
+  --fgs-tab-container-bg: #100f0d;
+  --fgs-tab-bg: #171512;
+  --fgs-tab-active-bg: #211c14;
+  --fgs-popup-bg: #191714;
+  --fgs-tooltip-bg: #12110f;
+  --fgs-tooltip-text: #e8e0cd;
+  --fgs-input-bg: #12110f;
+  --fgs-overlay: rgba(5,4,3,.72);
+
+  /* Solid inline / box tints (never transparent) */
+  --fgs-quote-bg: #1c1913;
+  --fgs-tag-bg: #262015;
+  --fgs-tag-bg-hover: #332b1a;
+  --fgs-inline-code-bg: #221d15;
+  --fgs-selection-bg: #3b3222;
+  --fgs-highlight-bg: #453823;
+  --fgs-line-active-bg: #1d1a15;
+  --fgs-callout-bg: #211d18;
+  --fgs-code-bg: #17140f;
+  --fgs-table-bg: #17140f;
+  --fgs-table-header-bg: #211b13;
+  --fgs-properties-bg: #191714;
+
+  /* Hover / active tints (used only on solid parents) */
+  --fgs-hover: rgba(184,150,74,.10);
+  --fgs-active: rgba(184,150,74,.14);
+
+  /* Borders */
+  --fgs-border: rgba(184,150,74,.14);
+  --fgs-border-soft: rgba(184,150,74,.10);
+  --fgs-border-strong: rgba(184,150,74,.28);
+
+  /* Shadows */
+  --fgs-shadow-sm: 0 4px 14px rgba(0,0,0,.25);
+  --fgs-shadow-md: 0 8px 25px rgba(0,0,0,.28);
+  --fgs-shadow-lg: 0 20px 60px rgba(0,0,0,.65);
+
+  /* Scrollbars (Obsidian variables, no raw pseudo-elements) */
+  --fgs-scrollbar-bg: #0e0d0b;
+  --fgs-scrollbar-thumb: rgba(184,150,74,.30);
+  --fgs-scrollbar-thumb-hover: rgba(205,183,131,.55);
+
+  /* Text */
+  --fgs-text: #c8c0ae;
+  --fgs-text-muted: #a29784;
+  --fgs-text-faint: #7d7466;
+  --fgs-text-bright: #efe7d3;
+  --fgs-text-on-accent: #17130d;
+  --fgs-strong-text: #d6c8a4;
+  --fgs-em-text: #cdb783;
+  --fgs-selection-text: #f5f0df;
+  --fgs-mark-text: #f5f0df;
+  --fgs-error: #c06a63;
+  --fgs-warning: #d0a55d;
+  --fgs-success: #93a874;
+
+  /* Gold */
+  --fgs-accent: #b8964a;
+  --fgs-accent-soft: #cdb783;
+  --fgs-accent-bright: #ead79a;
+  --fgs-accent-hover: #cdb783;
+  --fgs-bronze: #80653b;
+  --fgs-link: #bda875;
+  --fgs-link-hover: #ead79a;
+  --fgs-link-glow: rgba(184,150,74,.18);
+
+  /* Dropdown arrow */
+  --fgs-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23b8964a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  /* Headings */
+  --fgs-heading-1: #cdb783;
+  --fgs-heading-2: #d1c29c;
+  --fgs-heading-3: #b8964a;
+  --fgs-heading-4: #bda875;
+  --fgs-heading-5: #a99f8d;
+  --fgs-heading-6: #948a78;
+
+  /* Quotes and callouts */
+  --fgs-quote-text: #c7bda7;
+  --fgs-callout-title: #cdb783;
+  --fgs-callout-lore: #b8964a;
+  --fgs-callout-journal: #bda875;
+  --fgs-callout-research: #7d8da8;
+  --fgs-callout-secret: #72552d;
+  --fgs-callout-artifact: #d1b86b;
+  --fgs-callout-quest: #a87542;
+  --fgs-callout-warning: #a95656;
+
+  /* Tables */
+  --fgs-table-text: #d8cdb5;
+  --fgs-table-header-text: #e4d8bd;
+  --fgs-table-border: rgba(184,150,74,.30);
+  --fgs-table-cell-border: rgba(184,150,74,.15);
+
+  /* Tags */
+  --fgs-tag-border: rgba(184,150,74,.20);
+  --fgs-tag-text: #cdb783;
+  --fgs-tag-text-hover: #ead79a;
+
+  /* Code */
+  --fgs-code-border: rgba(184,150,74,.18);
+  --fgs-code-normal: #d6cbb2;
+  --fgs-code-comment: #8a806d;
+  --fgs-code-keyword: #d2a65e;
+  --fgs-code-function: #cdb783;
+  --fgs-code-string: #c0b184;
+  --fgs-code-number: #d6b97d;
+  --fgs-code-property: #bda875;
+  --fgs-code-punctuation: #9a8f7c;
+  --fgs-inline-code-text: #dbc79a;
+
+  /* Properties */
+  --fgs-properties-key: #b8964a;
+  --fgs-properties-value: #c8c0ae;
+
+  /* Graph */
+  --fgs-graph-node: #d4a84f;
+  --fgs-graph-node-focused: #ffe7a0;
+  --fgs-graph-node-tag: #e0c06b;
+  --fgs-graph-node-unresolved: #76582d;
+  --fgs-graph-node-attachment: #a77b38;
+  --fgs-graph-line: rgba(230,190,90,.30);
+  --fgs-graph-text: #e4c982;
+
+  /* Obsidian core mapping (solid colors only) */
+  --background-primary: var(--fgs-bg);
+  --background-primary-alt: var(--fgs-bg-alt);
+  --background-secondary: var(--fgs-sidebar-bg);
+  --background-secondary-alt: var(--fgs-panel);
+
+  --background-modifier-border: var(--fgs-border);
+  --background-modifier-border-hover: var(--fgs-border-strong);
+  --background-modifier-border-focus: var(--fgs-accent);
+  --background-modifier-hover: var(--fgs-hover);
+  --background-modifier-active-hover: var(--fgs-hover);
+  --background-modifier-form-field: var(--fgs-input-bg);
+  --background-modifier-form-field-highlighted: var(--fgs-raised);
+  --background-modifier-box-shadow: rgba(0,0,0,.35);
+  --background-modifier-cover: var(--fgs-overlay);
+  --background-modifier-error: rgba(192,106,99,.16);
+  --background-modifier-success: rgba(147,168,116,.16);
+
+  --text-normal: var(--fgs-text);
+  --text-muted: var(--fgs-text-muted);
+  --text-faint: var(--fgs-text-faint);
+  --text-accent: var(--fgs-accent);
+  --text-accent-hover: var(--fgs-accent-bright);
+  --text-error: var(--fgs-error);
+  --text-error-hover: #d47d75;
+  --text-success: var(--fgs-success);
+  --text-warning: var(--fgs-warning);
+  --text-on-accent: var(--fgs-text-on-accent);
+  --text-selection: var(--fgs-selection-bg);
+  --text-highlight-bg: var(--fgs-highlight-bg);
+  --text-highlight-bg-active: #4d3f27;
+
+  --interactive-normal: var(--fgs-panel);
+  --interactive-hover: var(--fgs-hover);
+  --interactive-accent: var(--fgs-accent);
+  --interactive-accent-hover: var(--fgs-accent-bright);
+  --interactive-accent-light: var(--fgs-accent-soft);
+
+  --scrollbar-bg: var(--fgs-scrollbar-bg);
+  --scrollbar-thumb-bg: var(--fgs-scrollbar-thumb);
+  --scrollbar-active-thumb-bg: var(--fgs-scrollbar-thumb-hover);
+
+  --divider-color: var(--fgs-border);
+  --divider-color-hover: var(--fgs-accent);
+
+  --icon-color: var(--fgs-accent);
+  --icon-color-hover: var(--fgs-accent-bright);
+  --icon-color-active: var(--fgs-accent-bright);
+  --icon-color-focused: var(--fgs-accent-bright);
+
+  --titlebar-background: var(--fgs-titlebar-bg);
+  --titlebar-background-focused: var(--fgs-titlebar-bg);
+  --titlebar-text-color: var(--fgs-accent-soft);
+  --titlebar-text-color-focused: var(--fgs-accent-bright);
+
+  --status-bar-background: var(--fgs-status-bg);
+  --status-bar-text-color: var(--fgs-text-muted);
+
+  --tab-container-background: var(--fgs-tab-container-bg);
+  --ribbon-background: var(--fgs-ribbon-bg);
+  --ribbon-background-collapsed: var(--fgs-ribbon-bg);
+
+  --nav-item-background-hover: var(--fgs-hover);
+  --nav-item-background-active: var(--fgs-active);
+  --nav-item-background-selected: var(--fgs-active);
+
+  --workspace-background-translucent: rgba(14,13,11,.72);
+
+  --code-background: var(--fgs-code-bg);
+  --code-normal: var(--fgs-code-normal);
+  --code-comment: var(--fgs-code-comment);
+  --code-function: var(--fgs-code-function);
+  --code-important: var(--fgs-code-keyword);
+  --code-keyword: var(--fgs-code-keyword);
+  --code-operator: var(--fgs-code-punctuation);
+  --code-property: var(--fgs-code-property);
+  --code-punctuation: var(--fgs-code-punctuation);
+  --code-string: var(--fgs-code-string);
+  --code-tag: var(--fgs-code-keyword);
+  --code-value: var(--fgs-code-number);
+
+  --tag-color: var(--fgs-tag-text);
+  --tag-background: var(--fgs-tag-bg);
+  --tag-background-hover: var(--fgs-tag-bg-hover);
+  --tag-color-hover: var(--fgs-tag-text-hover);
+  --tag-border-color: var(--fgs-tag-border);
+
+  --h1-color: var(--fgs-heading-1);
+  --h2-color: var(--fgs-heading-2);
+  --h3-color: var(--fgs-heading-3);
+  --h4-color: var(--fgs-heading-4);
+  --h5-color: var(--fgs-heading-5);
+  --h6-color: var(--fgs-heading-6);
+
+  --hr-color: var(--fgs-border-strong);
+  --list-marker-color: var(--fgs-accent);
+  --blockquote-border-color: var(--fgs-accent);
+  --blockquote-background-color: var(--fgs-quote-bg);
+  --blockquote-text-color: var(--fgs-quote-text);
+
+  --checkbox-color: var(--fgs-accent);
+  --checkbox-border-color: var(--fgs-bronze);
+  --checkbox-marker-color: var(--fgs-text-on-accent);
+
+  --metadata-label-text-color: var(--fgs-properties-key);
+  --metadata-input-text-color: var(--fgs-properties-value);
+  --metadata-divider-color: var(--fgs-border);
+
+  --link-color: var(--fgs-link);
+  --link-color-hover: var(--fgs-link-hover);
+  --link-unresolved: var(--fgs-text-muted);
+  --link-unresolved-color: var(--fgs-text-muted);
+
+  --file-line-width: var(--fgs-reading-max-width);
+  --font-text-size: 17px;
+
+  --radius-s: var(--fgs-radius-sm);
+  --radius-m: var(--fgs-radius-md);
+  --radius-l: var(--fgs-radius-lg);
 }
+
 /* =====================================================
-   02 - GLOBAL ATMOSPHERE
-   FORGOTTEN SANCTUARY AMBIENCE
+   LIGHT SANCTUARY TOKENS
+   SOLID PARCHMENT - HIGH READABILITY
    ===================================================== */
 
+.theme-light {
+  color-scheme: light;
 
-.app-container {
+  /* Large atmosphere surfaces */
+  --fgs-app-bg: radial-gradient(circle at 20% 20%, rgba(184,150,74,.10), transparent 45%), linear-gradient(135deg, #eee5d3, #ded2b8);
+  --fgs-reading-bg: #fbf7ee;
+  --fgs-graph-bg: radial-gradient(circle at center, rgba(184,150,74,.10), transparent 40%), linear-gradient(160deg, #efe7d6, #e0d3b9, #d6c7ab);
 
+  /* Solid surfaces */
+  --fgs-bg: #e8dfcd;
+  --fgs-bg-alt: #ddd2ba;
+  --fgs-surface: #f6f1e7;
+  --fgs-panel: #f2ebdd;
+  --fgs-raised: #ece2ce;
+  --fgs-sidebar-bg: #ece3d1;
+  --fgs-ribbon-bg: #e2d7c1;
+  --fgs-titlebar-bg: #e4d9c4;
+  --fgs-status-bg: #e4d9c4;
+  --fgs-tab-container-bg: #e2d7c1;
+  --fgs-tab-bg: #efe7d8;
+  --fgs-tab-active-bg: #f6efe1;
+  --fgs-popup-bg: #f7f2e8;
+  --fgs-tooltip-bg: #f2ebdd;
+  --fgs-tooltip-text: #241d13;
+  --fgs-input-bg: #fbf7ee;
+  --fgs-overlay: rgba(45,31,12,.45);
 
-background:
+  /* Solid inline / box tints */
+  --fgs-quote-bg: #f4edda;
+  --fgs-tag-bg: #eadfc4;
+  --fgs-tag-bg-hover: #e0d0a6;
+  --fgs-inline-code-bg: #efe3c8;
+  --fgs-selection-bg: #e3cf9a;
+  --fgs-highlight-bg: #ecd9a0;
+  --fgs-line-active-bg: #f3ecdd;
+  --fgs-callout-bg: #f5efe3;
+  --fgs-code-bg: #f0e7d5;
+  --fgs-table-bg: #fbf6ec;
+  --fgs-table-header-bg: #eadfc7;
+  --fgs-properties-bg: #f2ebdd;
 
+  /* Hover / active tints (solid parents only) */
+  --fgs-hover: rgba(139,100,27,.10);
+  --fgs-active: rgba(139,100,27,.16);
 
-radial-gradient(
-circle at 20% 80%,
-rgba(184,150,74,.035),
-transparent 45%
-),
+  /* Borders */
+  --fgs-border: rgba(101,68,20,.18);
+  --fgs-border-soft: rgba(101,68,20,.12);
+  --fgs-border-strong: rgba(91,57,8,.32);
 
+  /* Shadows */
+  --fgs-shadow-sm: 0 4px 12px rgba(70,48,15,.10);
+  --fgs-shadow-md: 0 8px 20px rgba(70,48,15,.12);
+  --fgs-shadow-lg: 0 18px 45px rgba(70,48,15,.18);
 
-linear-gradient(
-180deg,
-#151310,
-#0f0e0c
-);
+  /* Scrollbars */
+  --fgs-scrollbar-bg: #ded3bd;
+  --fgs-scrollbar-thumb: rgba(101,68,20,.30);
+  --fgs-scrollbar-thumb-hover: rgba(101,68,20,.45);
 
+  /* Text */
+  --fgs-text: #241d13;
+  --fgs-text-muted: #5a4a33;
+  --fgs-text-faint: #6f6048;
+  --fgs-text-bright: #14100a;
+  --fgs-text-on-accent: #fff8e8;
+  --fgs-strong-text: #1f1810;
+  --fgs-em-text: #5d3d0a;
+  --fgs-selection-text: #1d1509;
+  --fgs-mark-text: #1d1509;
+  --fgs-error: #933a32;
+  --fgs-warning: #8a5a12;
+  --fgs-success: #556b34;
 
+  /* Gold */
+  --fgs-accent: #7d5512;
+  --fgs-accent-soft: #6a470f;
+  --fgs-accent-bright: #8d6215;
+  --fgs-accent-hover: #6a470f;
+  --fgs-bronze: #7a5a22;
+  --fgs-link: #6f4a10;
+  --fgs-link-hover: #8d6215;
+  --fgs-link-glow: transparent;
+
+  /* Dropdown arrow */
+  --fgs-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%237d5512' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  /* Headings */
+  --fgs-heading-1: #5b3908;
+  --fgs-heading-2: #68450d;
+  --fgs-heading-3: #7a5412;
+  --fgs-heading-4: #6f4a10;
+  --fgs-heading-5: #5d4a2f;
+  --fgs-heading-6: #574830;
+
+  /* Quotes and callouts */
+  --fgs-quote-text: #3e301d;
+  --fgs-callout-title: #5d3d0a;
+  --fgs-callout-lore: #8b641b;
+  --fgs-callout-journal: #7d5512;
+  --fgs-callout-research: #3f5670;
+  --fgs-callout-secret: #5f441d;
+  --fgs-callout-artifact: #8a6415;
+  --fgs-callout-quest: #7a4a1d;
+  --fgs-callout-warning: #8c3a3a;
+
+  /* Tables */
+  --fgs-table-text: #241d13;
+  --fgs-table-header-text: #2b1c08;
+  --fgs-table-border: rgba(120,80,20,.35);
+  --fgs-table-cell-border: rgba(120,80,20,.15);
+
+  /* Tags */
+  --fgs-tag-border: rgba(101,68,20,.28);
+  --fgs-tag-text: #5d3d0a;
+  --fgs-tag-text-hover: #7a4f0d;
+
+  /* Code */
+  --fgs-code-border: rgba(120,80,20,.25);
+  --fgs-code-normal: #2a2115;
+  --fgs-code-comment: #6b5c46;
+  --fgs-code-keyword: #7a500d;
+  --fgs-code-function: #6a470f;
+  --fgs-code-string: #4f5d36;
+  --fgs-code-number: #7a500d;
+  --fgs-code-property: #5d3d0a;
+  --fgs-code-punctuation: #6a5b45;
+  --fgs-inline-code-text: #5c3a08;
+
+  /* Properties */
+  --fgs-properties-key: #5d3d0a;
+  --fgs-properties-value: #241d13;
+
+  /* Graph */
+  --fgs-graph-node: #8b641b;
+  --fgs-graph-node-focused: #5b3908;
+  --fgs-graph-node-tag: #a67620;
+  --fgs-graph-node-unresolved: #9b8a6d;
+  --fgs-graph-node-attachment: #7a5a22;
+  --fgs-graph-line: rgba(101,68,20,.25);
+  --fgs-graph-text: #3e301d;
+
+  /* Obsidian core mapping (solid colors only) */
+  --background-primary: var(--fgs-bg);
+  --background-primary-alt: var(--fgs-bg-alt);
+  --background-secondary: var(--fgs-sidebar-bg);
+  --background-secondary-alt: var(--fgs-panel);
+
+  --background-modifier-border: var(--fgs-border);
+  --background-modifier-border-hover: var(--fgs-border-strong);
+  --background-modifier-border-focus: var(--fgs-accent);
+  --background-modifier-hover: var(--fgs-hover);
+  --background-modifier-active-hover: var(--fgs-hover);
+  --background-modifier-form-field: var(--fgs-input-bg);
+  --background-modifier-form-field-highlighted: var(--fgs-raised);
+  --background-modifier-box-shadow: rgba(70,48,15,.18);
+  --background-modifier-cover: var(--fgs-overlay);
+  --background-modifier-error: rgba(147,58,50,.12);
+  --background-modifier-success: rgba(85,107,52,.12);
+
+  --text-normal: var(--fgs-text);
+  --text-muted: var(--fgs-text-muted);
+  --text-faint: var(--fgs-text-faint);
+  --text-accent: var(--fgs-accent);
+  --text-accent-hover: var(--fgs-accent-bright);
+  --text-error: var(--fgs-error);
+  --text-error-hover: #a8453c;
+  --text-success: var(--fgs-success);
+  --text-warning: var(--fgs-warning);
+  --text-on-accent: var(--fgs-text-on-accent);
+  --text-selection: var(--fgs-selection-bg);
+  --text-highlight-bg: var(--fgs-highlight-bg);
+  --text-highlight-bg-active: #e0c987;
+
+  --interactive-normal: var(--fgs-panel);
+  --interactive-hover: var(--fgs-hover);
+  --interactive-accent: var(--fgs-accent);
+  --interactive-accent-hover: var(--fgs-accent-hover);
+  --interactive-accent-light: var(--fgs-accent-soft);
+
+  --scrollbar-bg: var(--fgs-scrollbar-bg);
+  --scrollbar-thumb-bg: var(--fgs-scrollbar-thumb);
+  --scrollbar-active-thumb-bg: var(--fgs-scrollbar-thumb-hover);
+
+  --divider-color: var(--fgs-border);
+  --divider-color-hover: var(--fgs-accent);
+
+  --icon-color: var(--fgs-accent);
+  --icon-color-hover: var(--fgs-accent-bright);
+  --icon-color-active: var(--fgs-accent-bright);
+  --icon-color-focused: var(--fgs-accent-bright);
+
+  --titlebar-background: var(--fgs-titlebar-bg);
+  --titlebar-background-focused: var(--fgs-titlebar-bg);
+  --titlebar-text-color: var(--fgs-accent-soft);
+  --titlebar-text-color-focused: var(--fgs-accent-bright);
+
+  --status-bar-background: var(--fgs-status-bg);
+  --status-bar-text-color: var(--fgs-text-muted);
+
+  --tab-container-background: var(--fgs-tab-container-bg);
+  --ribbon-background: var(--fgs-ribbon-bg);
+  --ribbon-background-collapsed: var(--fgs-ribbon-bg);
+
+  --nav-item-background-hover: var(--fgs-hover);
+  --nav-item-background-active: var(--fgs-active);
+  --nav-item-background-selected: var(--fgs-active);
+
+  --workspace-background-translucent: rgba(232,223,205,.72);
+
+  --code-background: var(--fgs-code-bg);
+  --code-normal: var(--fgs-code-normal);
+  --code-comment: var(--fgs-code-comment);
+  --code-function: var(--fgs-code-function);
+  --code-important: var(--fgs-code-keyword);
+  --code-keyword: var(--fgs-code-keyword);
+  --code-operator: var(--fgs-code-punctuation);
+  --code-property: var(--fgs-code-property);
+  --code-punctuation: var(--fgs-code-punctuation);
+  --code-string: var(--fgs-code-string);
+  --code-tag: var(--fgs-code-keyword);
+  --code-value: var(--fgs-code-number);
+
+  --tag-color: var(--fgs-tag-text);
+  --tag-background: var(--fgs-tag-bg);
+  --tag-background-hover: var(--fgs-tag-bg-hover);
+  --tag-color-hover: var(--fgs-tag-text-hover);
+  --tag-border-color: var(--fgs-tag-border);
+
+  --h1-color: var(--fgs-heading-1);
+  --h2-color: var(--fgs-heading-2);
+  --h3-color: var(--fgs-heading-3);
+  --h4-color: var(--fgs-heading-4);
+  --h5-color: var(--fgs-heading-5);
+  --h6-color: var(--fgs-heading-6);
+
+  --hr-color: var(--fgs-border-strong);
+  --list-marker-color: var(--fgs-accent);
+  --blockquote-border-color: var(--fgs-accent);
+  --blockquote-background-color: var(--fgs-quote-bg);
+  --blockquote-text-color: var(--fgs-quote-text);
+
+  --checkbox-color: var(--fgs-accent);
+  --checkbox-border-color: var(--fgs-bronze);
+  --checkbox-marker-color: var(--fgs-text-on-accent);
+
+  --metadata-label-text-color: var(--fgs-properties-key);
+  --metadata-input-text-color: var(--fgs-properties-value);
+  --metadata-divider-color: var(--fgs-border);
+
+  --link-color: var(--fgs-link);
+  --link-color-hover: var(--fgs-link-hover);
+  --link-unresolved: var(--fgs-text-muted);
+  --link-unresolved-color: var(--fgs-text-muted);
+
+  --file-line-width: var(--fgs-reading-max-width);
+  --font-text-size: 17px;
+
+  --radius-s: var(--fgs-radius-sm);
+  --radius-m: var(--fgs-radius-md);
+  --radius-l: var(--fgs-radius-lg);
 }
-
-
 
 /* =====================================================
-   WORKSPACE
-   KEEP OBSIDIAN STABLE
+   BASE WORKSPACE
    ===================================================== */
-
-
-.workspace,
-.workspace-split {
-
-
-background:
-
-transparent;
-
-
-}
-
-
-
-.workspace-leaf {
-
-
-background:
-
-transparent;
-
-
-}
-
-
-
-/* =====================================================
-   TEXT RENDERING
-   COMFORT READING
-   ===================================================== */
-
 
 body {
+  background-color: var(--fgs-bg);
+  color: var(--fgs-text);
+  font-family: var(--fgs-font-ui);
+  font-size: 16px;
+  line-height: 1.6;
 
+  --font-interface-theme: var(--fgs-font-ui);
+  --font-text-theme: var(--fgs-font-text);
+  --font-monospace-theme: var(--fgs-font-mono);
+  --font-interface: var(--fgs-font-ui);
+  --font-text: var(--fgs-font-text);
+  --font-monospace: var(--fgs-font-mono);
 
--webkit-font-smoothing:
-
-antialiased;
-
-
--moz-osx-font-smoothing:
-
-grayscale;
-
-
+  --callout-radius: var(--fgs-radius-lg);
+  --code-radius: var(--fgs-radius-md);
+  --tag-radius: 20px;
+  --input-radius: 8px;
+  --button-radius: 8px;
+  --checkbox-radius: 4px;
 }
-/* =====================================================
-   03 - READING AREA
-   FORGOTTEN ARCHIVE CHAMBER
-   COMFORT EDITION
-   ===================================================== */
 
+/* Atmosphere lives only on the largest surface */
+.app-container {
+  background: var(--fgs-app-bg);
+}
 
-/* Main workspace page */
+.horizontal-main-container,
+.workspace,
+.workspace-split,
+.workspace-leaf {
+  background-color: transparent;
+}
 
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background-color: var(--fgs-sidebar-bg);
+}
 
+.workspace-split.mod-left-split {
+  border-right: 1px solid var(--fgs-border-soft);
+}
+
+.workspace-split.mod-right-split {
+  border-left: 1px solid var(--fgs-border-soft);
+}
+
+.workspace-split.mod-root {
+  background-color: transparent;
+}
+
+/* Every pane gets a solid floor so no pattern shows through */
 .workspace-leaf-content {
-
-
-background:
-
-var(--sanctuary-bg);
-
-
+  background-color: var(--fgs-surface);
 }
 
+.workspace-split.mod-left-split .workspace-leaf-content,
+.workspace-split.mod-right-split .workspace-leaf-content {
+  background-color: transparent;
+}
 
+.view-content {
+  background-color: transparent;
+}
 
-/* Reading surface */
+.workspace-ribbon,
+.side-dock-ribbon {
+  background-color: var(--fgs-ribbon-bg);
+  background-image: none;
+}
 
+.side-dock-plugin-panel {
+  background-color: var(--fgs-sidebar-bg);
+  color: var(--fgs-text);
+}
+
+.nav-files-container {
+  background-color: transparent;
+}
+
+.nav-header,
+.workspace-leaf-content-header {
+  background-color: var(--fgs-sidebar-bg);
+  background-image: none;
+  color: var(--fgs-text-muted);
+}
+
+/* =====================================================
+   READING SURFACE
+   CORE COMFORT SYSTEM PRESERVED
+   ===================================================== */
 
 .markdown-preview-view,
 .markdown-source-view {
-
-
-background:
-
-
-linear-gradient(
-145deg,
-#1b1915,
-#171512
-);
-
-
+  background: var(--fgs-reading-bg);
+  color: var(--fgs-text);
 }
 
+.markdown-rendered,
+.markdown-preview-section {
+  background-color: transparent;
+  color: var(--fgs-text);
+}
 
-
-/* =====================================================
-   READING WIDTH
-   LONG FORM COMFORT
-   ===================================================== */
-
+.markdown-preview-view {
+  font-family: var(--fgs-font-text);
+  font-size: var(--font-text-size);
+  line-height: 1.85;
+  letter-spacing: .1px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
 .markdown-preview-view .markdown-preview-sizer,
 .markdown-source-view .cm-sizer {
-
-
-max-width:
-
-850px;
-
-
-margin-left:
-
-auto;
-
-
-margin-right:
-
-auto;
-
-
+  max-width: var(--fgs-reading-max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-/* Better reading focus */
-
-
-.markdown-preview-view {
-
-
-padding-left:
-
-24px;
-
-
-padding-right:
-
-24px;
-
-
+.markdown-preview-view p,
+.markdown-rendered p {
+  margin-bottom: 1.35em;
 }
+
 /* =====================================================
-   04 - TYPOGRAPHY
-   COMFORT READING SYSTEM
+   TYPOGRAPHY
    ===================================================== */
 
-
-/* Default UI font */
-
-
-body {
-
-
-font-family:
-
-"Inter",
-sans-serif;
-
-
+.markdown-preview-view strong,
+.markdown-rendered strong {
+  color: var(--fgs-strong-text);
+  font-weight: 700;
 }
 
-
-
-/* Main document text */
-
-
-.markdown-preview-view {
-
-
-font-size:
-
-17px;
-
-
-line-height:
-
-1.85;
-
-
-color:
-
-var(--sanctuary-text);
-
-
-letter-spacing:
-
-0.1px;
-
-
+.markdown-preview-view em,
+.markdown-rendered em {
+  color: var(--fgs-em-text);
+  font-style: italic;
 }
 
-
-
-/* Paragraph breathing space */
-
-
-.markdown-preview-view p {
-
-
-margin-bottom:
-
-1.35em;
-
-
+.markdown-preview-view mark,
+.markdown-rendered mark {
+  background-color: var(--fgs-highlight-bg);
+  color: var(--fgs-mark-text);
+  border-radius: 3px;
+  padding: 1px 3px;
 }
 
-
-
-/* Reading mode links */
-
-.markdown-preview-view strong {
-
-
-color:
-
-#d1c29c;
-
-
-font-weight:
-
-600;
-
-
+.markdown-preview-view hr,
+.markdown-rendered hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--fgs-border-strong);
+  background-color: transparent;
 }
+
 /* =====================================================
-   05 - HEADINGS
-   ANCIENT MANUSCRIPT STYLE
+   HEADINGS
    ===================================================== */
-
-
-/* All heading fonts */
-
 
 .markdown-preview-view h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.cm-header-1 {
+  font-family: var(--fgs-font-display);
+  color: var(--fgs-heading-1);
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 1.3;
+}
+
 .markdown-preview-view h2,
-.markdown-preview-view h3 {
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-letter-spacing:
-
-0.5px;
-
-
-font-weight:
-
-600;
-
-
+.markdown-rendered h2,
+.HyperMD-header-2,
+.cm-header-2 {
+  font-family: var(--fgs-font-heading);
+  color: var(--fgs-heading-2);
+  font-weight: 700;
+  letter-spacing: .4px;
+  line-height: 1.35;
 }
 
-
-
-/* =====================================================
-   MAIN TITLE
-   SACRED ARCHIVE COVER
-   ===================================================== */
-
-
-.markdown-preview-view h1 {
-
-
-font-family:
-
-"Cinzel Decorative",
-serif;
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
-font-size:
-
-2em;
-
-
-border-bottom:
-
-1px solid rgba(184,150,74,.20);
-
-
-padding-bottom:
-
-10px;
-
-
+.markdown-preview-view h3,
+.markdown-rendered h3,
+.HyperMD-header-3,
+.cm-header-3 {
+  font-family: var(--fgs-font-heading);
+  color: var(--fgs-heading-3);
+  font-weight: 600;
+  letter-spacing: .35px;
+  line-height: 1.4;
 }
 
-
-
-/* =====================================================
-   CHAPTER TITLES
-   ===================================================== */
-
-
-.markdown-preview-view h2 {
-
-
-color:
-
-#d1c29c;
-
-
+.markdown-preview-view h4,
+.markdown-rendered h4,
+.HyperMD-header-4,
+.cm-header-4 {
+  font-family: var(--fgs-font-heading);
+  color: var(--fgs-heading-4);
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-
-
-/* =====================================================
-   SECTION TITLES
-   ===================================================== */
-
-
-.markdown-preview-view h3 {
-
-
-color:
-
-var(--sanctuary-gold);
-
-
+.markdown-preview-view h5,
+.markdown-rendered h5,
+.HyperMD-header-5,
+.cm-header-5 {
+  font-family: var(--fgs-font-heading);
+  color: var(--fgs-heading-5);
+  font-weight: 600;
+  line-height: 1.45;
 }
+
+.markdown-preview-view h6,
+.markdown-rendered h6,
+.HyperMD-header-6,
+.cm-header-6 {
+  font-family: var(--fgs-font-heading);
+  color: var(--fgs-heading-6);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+  font-size: 2em;
+  border-bottom: 1px solid var(--fgs-border-strong);
+  padding-bottom: 10px;
+}
+
+.markdown-preview-view h2,
+.markdown-rendered h2 {
+  font-size: 1.6em;
+}
+
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  font-size: 1.3em;
+}
+
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+  font-size: 1.15em;
+}
+
+.markdown-preview-view h5,
+.markdown-rendered h5 {
+  font-size: 1.05em;
+}
+
+.markdown-preview-view h6,
+.markdown-rendered h6 {
+  font-size: 1em;
+}
+
 /* =====================================================
-   06 - LINKS
-   GOLDEN THREADS
+   LINKS
    ===================================================== */
-
-
-/* Normal links */
-
 
 .internal-link,
-.external-link {
-
-
-color:
-
-#bda875;
-
-
-transition:
-
-color .15s ease;
-
-
+.external-link,
+.markdown-rendered a {
+  color: var(--fgs-link);
+  transition: color .15s ease;
 }
-
-
-
-/* Link hover */
-
 
 .internal-link:hover,
-.external-link:hover {
-
-
-color:
-
-var(--sanctuary-gold-bright);
-
-
-text-shadow:
-
-
-0 0 5px rgba(184,150,74,.18);
-
-
+.external-link:hover,
+.markdown-rendered a:hover {
+  color: var(--fgs-link-hover);
+  text-shadow: 0 0 5px var(--fgs-link-glow);
 }
 
+a.is-unresolved,
+.cm-hmd-internal-link.is-unresolved {
+  color: var(--fgs-text-muted);
+}
 
+.cm-hmd-internal-link,
+.cm-link {
+  color: var(--fgs-link);
+}
+
+.cm-url {
+  color: var(--fgs-accent);
+}
+
+.cm-formatting-link {
+  color: var(--fgs-text-faint);
+}
 
 /* =====================================================
-   CURSOR + TEXT SELECTION
+   SELECTION AND CURSOR
+   SOLID SELECTION COLORS - NO INVISIBLE TEXT
    ===================================================== */
-
-
-/* Selected text */
-
 
 ::selection {
-
-
-background:
-
-rgba(184,150,74,.16);
-
-
-color:
-
-#f5f0df;
-
-
+  background-color: var(--fgs-selection-bg);
+  color: var(--fgs-selection-text);
 }
 
-
-
-/* Editor cursor */
-
-
-.cm-cursor {
-
-
-border-left:
-
-2px solid var(--sanctuary-gold-soft);
-
-
-}
-/* =====================================================
-   07 - TITLE BAR
-   OBSIDIAN GOLDEN FRAME
-   ===================================================== */
-
-
-.titlebar {
-
-
-background:
-
-#0e0d0b;
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
+.cm-selectionBackground,
+.cm-focused .cm-selectionBackground {
+  background-color: var(--fgs-selection-bg);
 }
 
-
-
-.titlebar-text {
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-letter-spacing:
-
-0.5px;
-
-
+.cm-cursor,
+.cm-dropCursor {
+  border-left: 2px solid var(--fgs-accent-soft);
 }
-
-
 
 /* =====================================================
-   TAB SYSTEM
-   ANCIENT ARCHIVE SCROLLS
+   EDITOR BASE (SOURCE MODE COMFORT)
    ===================================================== */
 
-
-.workspace-tab-header-container {
-
-
-background:
-
-#100f0d;
-
-
-border-bottom:
-
-1px solid rgba(184,150,74,.12);
-
-
+.markdown-source-view .cm-scroller {
+  font-family: var(--fgs-font-text);
 }
 
-
-
-/* Normal tabs */
-
-
-.workspace-tab-header {
-
-
-background:
-
-#171512;
-
-
-color:
-
-var(--sanctuary-text-soft);
-
-
-border-bottom:
-
-2px solid transparent;
-
-
-transition:
-
-
-background .15s ease,
-color .15s ease;
-
-
+.markdown-source-view .cm-content {
+  background-color: transparent;
+  color: var(--fgs-text);
+  font-size: var(--font-text-size);
+  line-height: 1.85;
 }
 
-
-
-/* Hover tab */
-
-
-.workspace-tab-header:hover {
-
-
-background:
-
-rgba(184,150,74,.06);
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
+.cm-line {
+  color: var(--fgs-text);
 }
 
-
-
-/* Active tab */
-
-
-.workspace-tab-header.is-active {
-
-
-background:
-
-#211c14;
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
-border-bottom:
-
-2px solid var(--sanctuary-gold);
-
-
-}
-/* =====================================================
-   08 - ICONS
-   GOLDEN ARCHIVE TOOLS
-   ===================================================== */
-
-
-.clickable-icon,
-.svg-icon {
-
-
-color:
-
-var(--sanctuary-gold);
-
-
-transition:
-
-background .15s ease,
-color .15s ease;
-
-
+.cm-active {
+  color: var(--fgs-text-bright);
 }
 
-
-
-.clickable-icon:hover {
-
-
-background:
-
-rgba(184,150,74,.10);
-
-
-border-radius:
-
-8px;
-
-
-color:
-
-var(--sanctuary-gold-bright);
-
-
+.cm-active-line {
+  background-color: var(--fgs-line-active-bg);
 }
 
+.cm-gutters {
+  background-color: var(--fgs-sidebar-bg);
+  background-image: none;
+  border-right: 1px solid var(--fgs-border-soft);
+  color: var(--fgs-text-faint);
+}
 
+.cm-lineNumbers .cm-gutterElement {
+  color: var(--fgs-text-faint);
+}
+
+.cm-formatting {
+  color: var(--fgs-text-faint);
+}
+
+.cm-meta {
+  color: var(--fgs-text-muted);
+}
+
+.cm-builtin {
+  color: var(--fgs-accent);
+}
+
+.cm-type {
+  color: var(--fgs-code-function);
+}
+
+.cm-attribute {
+  color: var(--fgs-code-property);
+}
+
+.cm-def {
+  color: var(--fgs-code-normal);
+}
+
+.cm-qualifier {
+  color: var(--fgs-code-function);
+}
+
+.cm-variable {
+  color: var(--fgs-code-property);
+}
+
+.cm-operator {
+  color: var(--fgs-code-punctuation);
+}
+
+.cm-bracket {
+  color: var(--fgs-code-punctuation);
+}
+
+.cm-punctuation {
+  color: var(--fgs-code-punctuation);
+}
+
+.cm-comment {
+  color: var(--fgs-code-comment);
+}
+
+.cm-keyword {
+  color: var(--fgs-code-keyword);
+}
+
+.cm-string {
+  color: var(--fgs-code-string);
+}
+
+.cm-number {
+  color: var(--fgs-code-number);
+}
+
+.cm-invalidchar {
+  color: var(--fgs-error);
+}
+
+.cm-searchMatch {
+  background-color: var(--fgs-highlight-bg);
+  color: var(--fgs-mark-text);
+  border-radius: 3px;
+}
+
+.cm-searchMatch-selected {
+  background-color: var(--fgs-selection-bg);
+  color: var(--fgs-selection-text);
+  border-radius: 3px;
+}
+
+.cm-foldPlaceholder {
+  background-color: var(--fgs-panel);
+  background-image: none;
+  color: var(--fgs-text-muted);
+  border: 1px solid var(--fgs-border);
+  border-radius: 4px;
+}
+
+.cm-panels {
+  background-color: var(--fgs-popup-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border-color: var(--fgs-border);
+}
+
+.cm-panel.cm-search input,
+.cm-panel.cm-search button {
+  background-color: var(--fgs-input-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: 6px;
+}
+
+.cm-tooltip {
+  background-color: var(--fgs-popup-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border);
+  border-radius: 8px;
+  box-shadow: var(--fgs-shadow-md);
+}
+
+.cm-tooltip-autocomplete ul li {
+  color: var(--fgs-text);
+}
+
+.cm-tooltip-autocomplete ul li[aria-selected] {
+  background-color: var(--fgs-active);
+  color: var(--fgs-text-bright);
+}
+
+.cm-completionLabel {
+  color: var(--fgs-text);
+}
+
+.cm-completionDetail {
+  color: var(--fgs-text-muted);
+}
+
+/* Editor markdown syntax */
+
+.cm-header {
+  font-family: var(--fgs-font-heading);
+  font-weight: 700;
+}
+
+.cm-header-1,
+.HyperMD-header-1 {
+  font-family: var(--fgs-font-display);
+}
+
+.cm-strong {
+  color: var(--fgs-strong-text);
+  font-weight: 700;
+}
+
+.cm-em {
+  color: var(--fgs-em-text);
+  font-style: italic;
+}
+
+.cm-quote,
+.HyperMD-quote {
+  color: var(--fgs-quote-text);
+}
+
+.cm-inline-code {
+  background-color: var(--fgs-inline-code-bg);
+  background-image: none;
+  color: var(--fgs-inline-code-text);
+  border-radius: 4px;
+}
+
+.cm-hmd-frontmatter {
+  color: var(--fgs-text-muted);
+}
+
+.cm-hmd-frontmatter-key {
+  color: var(--fgs-properties-key);
+  font-weight: 600;
+}
+
+.cm-hmd-frontmatter-value {
+  color: var(--fgs-text);
+}
+
+.cm-hashtag,
+.cm-hashtag-start,
+.cm-hashtag-end,
+.cm-tag {
+  color: var(--fgs-tag-text);
+  background-color: var(--fgs-tag-bg);
+  background-image: none;
+  border-radius: 10px;
+}
+
+/* Lint-safe editor markers (border instead of underline) */
+
+.cm-editor .cm-lintRange-error {
+  border-bottom: 1px solid var(--fgs-error);
+}
+
+.cm-editor .cm-lintRange-warning {
+  border-bottom: 1px solid var(--fgs-warning);
+}
+
+.mod-error {
+  color: var(--fgs-error);
+}
+
+.mod-warning {
+  color: var(--fgs-warning);
+}
 
 /* =====================================================
    FILE EXPLORER
-   FORGOTTEN LIBRARY SHELVES
-   STABLE NO-JUMP VERSION
+   STABLE - NO BORDER-LEFT - NO PADDING CHANGE
    ===================================================== */
-
-
-
-/* Folder and files */
-
 
 .nav-folder-title,
 .nav-file-title {
-
-
-color:
-
-#c8bea8;
-
-
-font-family:
-
-"Inter",
-sans-serif;
-
-
-letter-spacing:
-
-0.2px;
-
-
-/*
-IMPORTANT:
-Do NOT use border-left
-Do NOT change padding
-*/
-
-
-transition:
-
-background .15s ease,
-color .15s ease;
-
-
+  color: var(--fgs-text);
+  background-color: transparent;
+  background-image: none;
+  border-radius: var(--fgs-radius-sm);
+  transition: var(--fgs-transition);
 }
-
-
-
-/* Hover */
-
 
 .nav-folder-title:hover,
 .nav-file-title:hover {
-
-
-background:
-
-rgba(184,150,74,.08);
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
+  background-color: var(--fgs-hover);
+  color: var(--fgs-accent-soft);
 }
 
-
-
-/* Active file */
-
-
+.nav-folder-title.is-active,
 .nav-file-title.is-active {
-
-
-background:
-
-rgba(184,150,74,.12);
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
+  background-color: var(--fgs-active);
+  color: var(--fgs-accent-bright);
 }
 
-
-
-/* Remove default icons */
-
-
-.nav-folder-title-content::before,
-.nav-file-title-content::before {
-
-
-content:"";
-
-
+.nav-folder-title-content,
+.nav-file-title-content,
+.tree-item-inner {
+  color: inherit;
 }
-
-
-
-/* Folder arrows */
-
 
 .nav-folder-collapse-indicator {
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
+  color: var(--fgs-accent-soft);
 }
 
-
-
-/* =====================================================
-   FILE TREE STABILITY
-   PREVENT INDENT DRIFT
-   ===================================================== */
-
+.nav-file-tag {
+  background-color: transparent;
+  color: var(--fgs-text-faint);
+}
 
 .nav-folder,
 .nav-file {
-
-
-transition:none;
-
-
+  transition: none;
 }
-
-
-
-/* Keep Obsidian native indentation */
-
-
-.nav-folder-children {
-
-
-margin-left:
-
-0;
-
-
-padding-left:
-
-0;
-
-
-}
-/* =====================================================
-   09 - ANCIENT RECORD CALLOUT SYSTEM
-   FORGOTTEN ARCHIVE CARDS
-   ===================================================== */
-
-
-.callout {
-
-
-background:
-
-#211d18;
-
-
-border:
-
-1px solid rgba(184,150,74,.14);
-
-
-border-radius:
-
-12px;
-
-
-box-shadow:
-
-0 8px 25px rgba(0,0,0,.28);
-
-
-}
-
-
-
-/* Callout title */
-
-
-.callout-title {
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
-letter-spacing:
-
-0.4px;
-
-
-}
-
-
-
-/* Callout text */
-
-
-.callout-content {
-
-
-color:
-
-var(--sanctuary-text);
-
-
-}
-
-
 
 /* =====================================================
-   LORE
+   TREES, SEARCH RESULTS, BACKLINKS
    ===================================================== */
 
-
-.callout[data-callout="lore"] {
-
-
-border-left:
-
-4px solid var(--sanctuary-gold);
-
-
-background:
-
-
-linear-gradient(
-90deg,
-rgba(184,150,74,.08),
-#211d18
-);
-
-
+.tree-item-self {
+  color: var(--fgs-text);
+  background-color: transparent;
+  background-image: none;
+  border-radius: var(--fgs-radius-sm);
+  transition: var(--fgs-transition);
 }
 
+.tree-item-self:hover {
+  background-color: var(--fgs-hover);
+  color: var(--fgs-accent-soft);
+}
 
+.tree-item-self.is-active {
+  background-color: var(--fgs-active);
+  color: var(--fgs-accent-bright);
+}
+
+.tree-item-flair {
+  background-color: transparent;
+  color: var(--fgs-text-faint);
+}
+
+.tree-item-icon {
+  color: var(--fgs-accent);
+}
+
+.search-result-container,
+.backlink-pane,
+.outgoing-link-pane {
+  background-color: transparent;
+  color: var(--fgs-text);
+}
+
+.search-result-file-title {
+  color: var(--fgs-text);
+}
+
+.search-result-file-matched-text {
+  background-color: var(--fgs-highlight-bg);
+  color: var(--fgs-mark-text);
+  border-radius: 3px;
+}
+
+.search-input-container input {
+  background-color: var(--fgs-input-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: 8px;
+}
 
 /* =====================================================
-   JOURNAL
+   TITLEBAR, TABS, VIEW HEADERS, STATUS BAR
+   ALL SOLID
    ===================================================== */
 
-
-.callout[data-callout="journal"] {
-
-
-border-left:
-
-4px solid #bda875;
-
-
+.titlebar {
+  background-color: var(--fgs-titlebar-bg);
+  background-image: none;
+  border-bottom: 1px solid var(--fgs-border-soft);
+  color: var(--fgs-accent-soft);
 }
 
-
-
-/* =====================================================
-   RESEARCH
-   ===================================================== */
-
-
-.callout[data-callout="research"] {
-
-
-border-left:
-
-4px solid #7d8da8;
-
-
+.titlebar-text {
+  color: var(--fgs-accent-soft);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
+  letter-spacing: .5px;
 }
 
-
-
-/* =====================================================
-   SECRET
-   ===================================================== */
-
-
-.callout[data-callout="secret"] {
-
-
-border-left:
-
-4px solid #72552d;
-
-
+.titlebar-button {
+  color: var(--fgs-text-muted);
+  transition: var(--fgs-transition);
 }
 
-
-
-/* =====================================================
-   ARTIFACT
-   ===================================================== */
-
-
-.callout[data-callout="artifact"] {
-
-
-border-left:
-
-4px solid #d1b86b;
-
-
+.titlebar-button:hover {
+  background-color: var(--fgs-hover);
+  color: var(--fgs-accent-bright);
 }
 
-
-
-/* =====================================================
-   QUEST
-   ===================================================== */
-
-
-.callout[data-callout="quest"] {
-
-
-border-left:
-
-4px solid #a87542;
-
-
+.workspace-tab-header-container {
+  background-color: var(--fgs-tab-container-bg);
+  background-image: none;
+  border-bottom: 1px solid var(--fgs-border-soft);
 }
 
-
-
-/* =====================================================
-   WARNING
-   ===================================================== */
-
-
-.callout[data-callout="warning"] {
-
-
-border-left:
-
-4px solid #a95656;
-
-
-}
-/* =====================================================
-   10 - ROYAL BLOCKQUOTE
-   ANCIENT QUOTE SCROLL
-   ===================================================== */
-
-
-blockquote {
-
-
-border-left:
-
-3px solid var(--sanctuary-gold);
-
-
-background:
-
-rgba(184,150,74,.05);
-
-
-padding:
-
-14px 18px;
-
-
-color:
-
-#c7bda7;
-
-
-font-style:
-
-italic;
-
-
-border-radius:
-
-8px;
-
-
+.workspace-tab-header {
+  background-color: var(--fgs-tab-bg);
+  background-image: none;
+  color: var(--fgs-text-muted);
+  border-bottom: 2px solid transparent;
+  transition: var(--fgs-transition);
 }
 
-
-
-
-
-/* =====================================================
-   11 - ARCHIVE TABLES
-   UNIFIED PARCHMENT STYLE
-   ===================================================== */
-
-
-/* Table container */
-
-
-.markdown-preview-view table {
-
-
-width:
-
-100%;
-
-
-background:
-
-#17140f;
-
-
-border:
-
-1px solid rgba(184,150,74,.30);
-
-
-border-collapse:
-
-collapse;
-
-
-border-radius:
-
-10px;
-
-
-overflow:
-
-hidden;
-
-
+.workspace-tab-header:hover {
+  background-color: var(--fgs-hover);
+  color: var(--fgs-accent-soft);
 }
 
-
-
-
-
-/* Header */
-
-
-.markdown-preview-view th {
-
-
-background:
-
-#17140f;
-
-
-color:
-
-#d8cdb5;
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-font-weight:
-
-600;
-
-
-padding:
-
-12px 15px;
-
-
-border-bottom:
-
-1px solid rgba(184,150,74,.25);
-
-
+.workspace-tab-header.is-active {
+  background-color: var(--fgs-tab-active-bg);
+  color: var(--fgs-accent-bright);
+  border-bottom-color: var(--fgs-accent);
 }
 
-
-
-
-
-/* Body */
-
-
-.markdown-preview-view td {
-
-
-background:
-
-#17140f;
-
-
-color:
-
-#d8cdb5;
-
-
-padding:
-
-12px 15px;
-
-
-border-bottom:
-
-1px solid rgba(184,150,74,.15);
-
-
+.workspace-tab-header-inner,
+.workspace-tab-header-inner-title {
+  color: inherit;
 }
 
-
-
-
-
-/* Remove first column special color */
-
-
-.markdown-preview-view td:first-child {
-
-
-color:
-
-#d8cdb5;
-
-
+.view-header {
+  background-color: var(--fgs-tab-container-bg);
+  background-image: none;
+  border-bottom: 1px solid var(--fgs-border-soft);
 }
 
-
-
-
-
-/* Row hover */
-
-
-.markdown-preview-view tr:hover td {
-
-
-background:
-
-rgba(184,150,74,.06);
-
-
-color:
-
-#ead79a;
-
-
-}
-/* =====================================================
-   12 - DATAVIEW ROYAL CATALOG
-   ARCHIVE RECORD TABLES
-   ===================================================== */
-
-
-.dataview.table-view-table {
-
-
-width:
-
-100%;
-
-
-background:
-
-#17140f;
-
-
-border:
-
-1px solid rgba(184,150,74,.30);
-
-
-border-collapse:
-
-collapse;
-
-
+.workspace-leaf.mod-active .view-header {
+  border-bottom-color: var(--fgs-border-strong);
 }
 
-
-
-
-
-/* Dataview header */
-
-
-.dataview.table-view-table th {
-
-
-background:
-
-#17140f;
-
-
-color:
-
-#d8cdb5;
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-font-weight:
-
-600;
-
-
-padding:
-
-12px 15px;
-
-
-border:
-
-1px solid rgba(184,150,74,.15);
-
-
+.view-header-title {
+  color: var(--fgs-accent-soft);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
 }
 
-
-
-
-
-/* Dataview body */
-
-
-.dataview.table-view-table td {
-
-
-background:
-
-#17140f;
-
-
-color:
-
-#d8cdb5;
-
-
-padding:
-
-12px 15px;
-
-
-border:
-
-1px solid rgba(184,150,74,.15);
-
-
+.view-header-icon {
+  color: var(--fgs-accent);
 }
-
-
-
-
-
-/* Same colour all columns */
-
-
-.dataview.table-view-table td:first-child {
-
-
-color:
-
-#d8cdb5;
-
-
-}
-
-
-
-
-
-/* =====================================================
-   13 - TAGS
-   ROYAL SEALS
-   ===================================================== */
-
-
-.tag {
-
-
-background:
-
-rgba(184,150,74,.08);
-
-
-border:
-
-1px solid rgba(184,150,74,.20);
-
-
-border-radius:
-
-20px;
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
-padding:
-
-3px 10px;
-
-
-transition:
-
-background .15s ease,
-color .15s ease;
-
-
-}
-
-
-
-
-
-.tag:hover {
-
-
-background:
-
-rgba(184,150,74,.16);
-
-
-color:
-
-var(--sanctuary-gold-bright);
-
-
-}
-/* =====================================================
-   14 - TASK SYSTEM
-   QUEST TRACKER
-   ===================================================== */
-
-
-.task-list-item-checkbox {
-
-
-appearance:
-
-none;
-
-
-width:
-
-17px;
-
-
-height:
-
-17px;
-
-
-border:
-
-1px solid var(--sanctuary-bronze);
-
-
-background:
-
-#12110f;
-
-
-border-radius:
-
-4px;
-
-
-vertical-align:
-
-middle;
-
-
-}
-
-
-
-
-
-/* Checked quest */
-
-
-.task-list-item-checkbox:checked {
-
-
-background:
-
-var(--sanctuary-gold);
-
-
-box-shadow:
-
-0 0 8px rgba(184,150,74,.35);
-
-
-}
-
-
-
-
-
-/* Completed task text */
-
-
-.task-list-item.is-checked {
-
-
-color:
-
-var(--sanctuary-muted);
-
-
-text-decoration:
-
-line-through;
-
-
-}
-
-
-
-
-
-/* =====================================================
-   15 - PROPERTIES PANEL
-   ARCHIVE METADATA
-   ===================================================== */
-
-
-.metadata-container {
-
-
-background:
-
-var(--sanctuary-surface);
-
-
-border:
-
-1px solid rgba(184,150,74,.16);
-
-
-border-radius:
-
-12px;
-
-
-padding:
-
-8px;
-
-
-}
-
-
-
-
-
-.metadata-property-key {
-
-
-color:
-
-var(--sanctuary-gold);
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-}
-
-
-
-
-
-.metadata-property-value {
-
-
-color:
-
-var(--sanctuary-text);
-
-
-}
-/* =====================================================
-   16 - GRAPH VIEW
-   FORGOTTEN GOLDEN CONSTELLATION
-   PERFORMANCE EDITION
-   ===================================================== */
-
-
-/* Background */
-
-
-.graph-view {
-
-
-background:
-
-
-radial-gradient(
-circle at center,
-rgba(184,150,74,.08),
-transparent 35%
-),
-
-
-linear-gradient(
-160deg,
-#080706,
-#17120b,
-#050403
-);
-
-
-}
-
-
-
-
-
-/* =====================================================
-   NODE COLORS
-   ===================================================== */
-
-
-.graph-view.color-fill {
-
-
-color:
-
-#d4a84f;
-
-
-}
-
-
-
-.graph-view.color-fill-focused {
-
-
-color:
-
-#ffe7a0;
-
-
-}
-
-
-
-.graph-view.color-fill-tag {
-
-
-color:
-
-#e0c06b;
-
-
-}
-
-
-
-.graph-view.color-fill-unresolved {
-
-
-color:
-
-#76582d;
-
-
-}
-
-
-
-.graph-view.color-fill-attachment {
-
-
-color:
-
-#a77b38;
-
-
-}
-
-
-
-
-
-/* =====================================================
-   GOLD RELIC NODES
-   LIGHTWEIGHT GLOW
-   ===================================================== */
-
-
-.graph-view .node {
-
-
-filter:
-
-drop-shadow(
-0 0 5px rgba(184,150,74,.45)
-);
-
-
-transition:
-
-filter .2s ease,
-transform .2s ease;
-
-
-}
-
-
-
-
-
-/* Hover */
-
-
-.graph-view .node:hover {
-
-
-transform:
-
-scale(1.12);
-
-
-filter:
-
-drop-shadow(
-0 0 12px rgba(255,225,140,.75)
-);
-
-
-}
-
-
-
-
-
-/* Selected node */
-
-
-.graph-view .node.is-focused {
-
-
-transform:
-
-scale(1.25);
-
-
-filter:
-
-drop-shadow(
-0 0 20px rgba(255,245,190,.85)
-);
-
-
-}
-
-
-
-
-
-/* =====================================================
-   GOLDEN CONNECTIONS
-   ===================================================== */
-
-
-.graph-view .link {
-
-
-stroke:
-
-rgba(230,190,90,.30);
-
-
-stroke-width:
-
-1.2px;
-
-
-}
-
-
-
-
-
-.graph-view .link:hover {
-
-
-stroke:
-
-rgba(255,235,150,.85);
-
-
-stroke-width:
-
-2px;
-
-
-}
-
-
-
-
-
-/* =====================================================
-   SEARCH RESULT
-   ===================================================== */
-
-
-.graph-view .search-result {
-
-
-filter:
-
-drop-shadow(
-0 0 15px rgba(255,245,190,.85)
-);
-
-
-}
-
-
-
-
-
-/* Dim unrelated notes */
-
-
-.graph-view .dimmed {
-
-
-opacity:
-
-0.15;
-
-
-}
-
-
-
-
-
-/* =====================================================
-   GRAPH LABELS
-   ANCIENT MANUSCRIPT
-   ===================================================== */
-
-
-.graph-view .label {
-
-
-color:
-
-#e4c982;
-
-
-font-family:
-
-"Cinzel",
-serif;
-
-
-text-shadow:
-
-0 3px 12px black;
-
-
-}
-
-
-
-
-
-/* =====================================================
-   GRAPH CONTROL PANEL
-   ===================================================== */
-
-
-.graph-controls {
-
-
-background:
-
-rgba(12,10,8,.92);
-
-
-border:
-
-1px solid rgba(205,183,131,.25);
-
-
-border-radius:
-
-14px;
-
-
-box-shadow:
-
-0 15px 45px rgba(0,0,0,.55);
-
-
-}
-
-
-
-
-
-.graph-controls-button {
-
-
-color:
-
-#cdb783;
-
-
-}
-
-
-
-.graph-controls-button:hover {
-
-
-background:
-
-rgba(184,150,74,.12);
-
-
-}
-/* =====================================================
-   17 - STATUS BAR
-   ROYAL FOOTER
-   ===================================================== */
-
 
 .status-bar {
-
-
-background:
-
-#0e0d0b;
-
-
-color:
-
-var(--sanctuary-muted);
-
-
-border-top:
-
-1px solid rgba(184,150,74,.12);
-
-
+  background-color: var(--fgs-status-bg);
+  background-image: none;
+  border-top: 1px solid var(--fgs-border-soft);
+  color: var(--fgs-text-muted);
 }
 
-
-
-
+.status-bar-item {
+  color: var(--fgs-text-muted);
+}
 
 /* =====================================================
-   18 - COMMAND PALETTE
-   ANCIENT SCROLL PANEL
+   ICONS AND CONTROLS
    ===================================================== */
 
-
-.prompt {
-
-
-background:
-
-#191714;
-
-
-border:
-
-1px solid rgba(184,150,74,.22);
-
-
-border-radius:
-
-12px;
-
-
-box-shadow:
-
-0 20px 60px rgba(0,0,0,.65);
-
-
+.clickable-icon,
+.nav-action-button,
+.workspace-tab-header-inner-close-button,
+.graph-controls-button {
+  color: var(--fgs-accent);
+  border-radius: 8px;
+  transition: var(--fgs-transition);
 }
 
-
-
-
-
-.prompt-input {
-
-
-color:
-
-var(--sanctuary-gold-soft);
-
-
+.clickable-icon:hover,
+.nav-action-button:hover,
+.workspace-tab-header-inner-close-button:hover,
+.graph-controls-button:hover {
+  background-color: var(--fgs-hover);
+  color: var(--fgs-accent-bright);
 }
 
-
-
-
-
-.prompt-item {
-
-
-color:
-
-var(--sanctuary-text);
-
-
+button.mod-cta {
+  background-color: var(--fgs-accent);
+  background-image: none;
+  color: var(--fgs-text-on-accent);
+  border: 1px solid var(--fgs-accent);
+  border-radius: 8px;
+  transition: var(--fgs-transition);
 }
 
-
-
-
-
-.prompt-item.is-selected {
-
-
-background:
-
-rgba(184,150,74,.12);
-
-
-color:
-
-var(--sanctuary-gold-bright);
-
-
+button.mod-cta:hover {
+  background-color: var(--fgs-accent-hover);
+  border-color: var(--fgs-accent-hover);
+  color: var(--fgs-text-on-accent);
 }
 
+/* Inputs: solid, clean, single arrow for dropdowns */
 
+.setting-item-control input[type="text"],
+.setting-item-control textarea {
+  background-color: var(--fgs-input-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: 8px;
+}
 
+select.dropdown,
+.setting-item-control select,
+.dropdown {
+  background-color: var(--fgs-input-bg);
+  background-image: var(--fgs-select-arrow);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: 8px;
+  padding-right: 30px;
+}
 
+.setting-item-control input[type="text"]:focus,
+.setting-item-control textarea:focus,
+select.dropdown:focus,
+.setting-item-control select:focus,
+.dropdown:focus {
+  border-color: var(--fgs-accent);
+}
+
+.checkbox-container {
+  background-image: none;
+}
 
 /* =====================================================
-   19 - SCROLLBAR
-   ANCIENT GOLDEN METAL
+   CALLOUTS
+   SOLID ARCHIVE CARDS
    ===================================================== */
 
-
-::-webkit-scrollbar {
-
-
-width:
-
-9px;
-
-
+.callout {
+  background-color: var(--fgs-callout-bg);
+  background-image: none;
+  border: 1px solid var(--fgs-border);
+  border-radius: 12px;
+  box-shadow: var(--fgs-shadow-md);
+  color: var(--fgs-text);
 }
 
-
-
-
-
-::-webkit-scrollbar-track {
-
-
-background:
-
-#0e0d0b;
-
-
+.callout-title {
+  color: var(--fgs-callout-title);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
+  letter-spacing: .4px;
 }
 
-
-
-
-
-::-webkit-scrollbar-thumb {
-
-
-background:
-
-rgba(184,150,74,.30);
-
-
-border-radius:
-
-10px;
-
-
+.callout-content {
+  background-color: transparent;
+  color: var(--fgs-text);
 }
 
-
-
-
-
-::-webkit-scrollbar-thumb:hover {
-
-
-background:
-
-rgba(205,183,131,.55);
-
-
+.callout-icon,
+.callout-fold {
+  color: var(--fgs-callout-title);
 }
+
+.callout[data-callout="lore"] {
+  border-left: 4px solid var(--fgs-callout-lore);
+}
+
+.callout[data-callout="journal"] {
+  border-left: 4px solid var(--fgs-callout-journal);
+}
+
+.callout[data-callout="research"] {
+  border-left: 4px solid var(--fgs-callout-research);
+}
+
+.callout[data-callout="secret"] {
+  border-left: 4px solid var(--fgs-callout-secret);
+}
+
+.callout[data-callout="artifact"] {
+  border-left: 4px solid var(--fgs-callout-artifact);
+}
+
+.callout[data-callout="quest"] {
+  border-left: 4px solid var(--fgs-callout-quest);
+}
+
+.callout[data-callout="warning"] {
+  border-left: 4px solid var(--fgs-callout-warning);
+}
+
+.callout[data-callout="warning"] .callout-title {
+  color: var(--fgs-callout-warning);
+}
+
 /* =====================================================
-   20 - FINAL SAFE TRANSITIONS
-   POLISHED ARCHIVE EXPERIENCE
+   BLOCKQUOTE
+   SOLID QUOTE SCROLL
    ===================================================== */
 
+.markdown-preview-view blockquote,
+.markdown-rendered blockquote {
+  background-color: var(--fgs-quote-bg);
+  background-image: none;
+  border-left: 3px solid var(--fgs-accent);
+  color: var(--fgs-quote-text);
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-style: italic;
+}
 
-/* Visual-only transitions */
+/* =====================================================
+   TABLES
+   SOLID - NO ZEBRA - NO BODY HOVER CHANGE
+   HEADER DISTINCT AND STABLE
+   ===================================================== */
 
+.markdown-preview-view table,
+.markdown-rendered table,
+.markdown-preview-view .table-view-table,
+.markdown-rendered .table-view-table,
+.dataview.table-view-table {
+  width: 100%;
+  background-color: var(--fgs-table-bg);
+  background-image: none;
+  border: 1px solid var(--fgs-table-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--fgs-radius-md);
+  overflow: hidden;
+}
+
+.markdown-preview-view table th,
+.markdown-rendered table th,
+.markdown-preview-view .table-view-table th,
+.markdown-rendered .table-view-table th,
+.dataview.table-view-table th,
+.markdown-preview-view table td,
+.markdown-rendered table td,
+.markdown-preview-view .table-view-table td,
+.markdown-rendered .table-view-table td,
+.dataview.table-view-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--fgs-table-cell-border);
+  border-right: 1px solid var(--fgs-table-cell-border);
+}
+
+.markdown-preview-view table th:last-child,
+.markdown-rendered table th:last-child,
+.markdown-preview-view .table-view-table th:last-child,
+.markdown-rendered .table-view-table th:last-child,
+.dataview.table-view-table th:last-child,
+.markdown-preview-view table td:last-child,
+.markdown-rendered table td:last-child,
+.markdown-preview-view .table-view-table td:last-child,
+.markdown-rendered .table-view-table td:last-child,
+.dataview.table-view-table td:last-child {
+  border-right: 0;
+}
+
+.markdown-preview-view table tbody tr:last-child td,
+.markdown-rendered table tbody tr:last-child td,
+.markdown-preview-view .table-view-table tbody tr:last-child td,
+.markdown-rendered .table-view-table tbody tr:last-child td,
+.dataview.table-view-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.markdown-preview-view table thead,
+.markdown-rendered table thead,
+.markdown-preview-view .table-view-table thead,
+.markdown-rendered .table-view-table thead,
+.dataview.table-view-table thead,
+.markdown-preview-view table thead tr,
+.markdown-rendered table thead tr,
+.markdown-preview-view .table-view-table thead tr,
+.markdown-rendered .table-view-table thead tr,
+.dataview.table-view-table thead tr {
+  background-color: var(--fgs-table-header-bg);
+}
+
+.markdown-preview-view table th,
+.markdown-rendered table th,
+.markdown-preview-view .table-view-table th,
+.markdown-rendered .table-view-table th,
+.dataview.table-view-table th {
+  background-color: var(--fgs-table-header-bg);
+  color: var(--fgs-table-header-text);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--fgs-table-border);
+}
+
+.markdown-preview-view table th:hover,
+.markdown-rendered table th:hover,
+.markdown-preview-view .table-view-table th:hover,
+.markdown-rendered .table-view-table th:hover,
+.dataview.table-view-table th:hover,
+.markdown-preview-view table thead tr:hover,
+.markdown-rendered table thead tr:hover,
+.markdown-preview-view .table-view-table thead tr:hover,
+.markdown-rendered .table-view-table thead tr:hover,
+.dataview.table-view-table thead tr:hover,
+.markdown-preview-view table thead tr:hover th,
+.markdown-rendered table thead tr:hover th,
+.markdown-preview-view .table-view-table thead tr:hover th,
+.markdown-rendered .table-view-table thead tr:hover th,
+.dataview.table-view-table thead tr:hover th {
+  background-color: var(--fgs-table-header-bg);
+  color: var(--fgs-table-header-text);
+}
+
+.markdown-preview-view table tbody,
+.markdown-rendered table tbody,
+.markdown-preview-view .table-view-table tbody,
+.markdown-rendered .table-view-table tbody,
+.dataview.table-view-table tbody {
+  background-color: var(--fgs-table-bg);
+}
+
+.markdown-preview-view table tbody tr,
+.markdown-rendered table tbody tr,
+.markdown-preview-view .table-view-table tbody tr,
+.markdown-rendered .table-view-table tbody tr,
+.dataview.table-view-table tbody tr,
+.markdown-preview-view table tbody tr:nth-child(odd),
+.markdown-rendered table tbody tr:nth-child(odd),
+.markdown-preview-view .table-view-table tbody tr:nth-child(odd),
+.markdown-rendered .table-view-table tbody tr:nth-child(odd),
+.dataview.table-view-table tbody tr:nth-child(odd),
+.markdown-preview-view table tbody tr:nth-child(even),
+.markdown-rendered table tbody tr:nth-child(even),
+.markdown-preview-view .table-view-table tbody tr:nth-child(even),
+.markdown-rendered .table-view-table tbody tr:nth-child(even),
+.dataview.table-view-table tbody tr:nth-child(even) {
+  background-color: var(--fgs-table-bg);
+}
+
+.markdown-preview-view table tbody td,
+.markdown-rendered table tbody td,
+.markdown-preview-view .table-view-table tbody td,
+.markdown-rendered .table-view-table tbody td,
+.dataview.table-view-table tbody td,
+.markdown-preview-view table tbody td:first-child,
+.markdown-rendered table tbody td:first-child,
+.markdown-preview-view .table-view-table tbody td:first-child,
+.markdown-rendered .table-view-table tbody td:first-child,
+.dataview.table-view-table tbody td:first-child {
+  background-color: var(--fgs-table-bg);
+  color: var(--fgs-table-text);
+  font-weight: 400;
+}
+
+.markdown-preview-view table tbody tr:hover,
+.markdown-rendered table tbody tr:hover,
+.markdown-preview-view .table-view-table tbody tr:hover,
+.markdown-rendered .table-view-table tbody tr:hover,
+.dataview.table-view-table tbody tr:hover,
+.markdown-preview-view table tbody tr:nth-child(odd):hover,
+.markdown-rendered table tbody tr:nth-child(odd):hover,
+.markdown-preview-view .table-view-table tbody tr:nth-child(odd):hover,
+.markdown-rendered .table-view-table tbody tr:nth-child(odd):hover,
+.dataview.table-view-table tbody tr:nth-child(odd):hover,
+.markdown-preview-view table tbody tr:nth-child(even):hover,
+.markdown-rendered table tbody tr:nth-child(even):hover,
+.markdown-preview-view .table-view-table tbody tr:nth-child(even):hover,
+.markdown-rendered .table-view-table tbody tr:nth-child(even):hover,
+.dataview.table-view-table tbody tr:nth-child(even):hover {
+  background-color: var(--fgs-table-bg);
+}
+
+.markdown-preview-view table tbody tr:hover td,
+.markdown-rendered table tbody tr:hover td,
+.markdown-preview-view .table-view-table tbody tr:hover td,
+.markdown-rendered .table-view-table tbody tr:hover td,
+.dataview.table-view-table tbody tr:hover td,
+.markdown-preview-view table tbody tr:nth-child(odd):hover td,
+.markdown-rendered table tbody tr:nth-child(odd):hover td,
+.markdown-preview-view .table-view-table tbody tr:nth-child(odd):hover td,
+.markdown-rendered .table-view-table tbody tr:nth-child(odd):hover td,
+.dataview.table-view-table tbody tr:nth-child(odd):hover td,
+.markdown-preview-view table tbody tr:nth-child(even):hover td,
+.markdown-rendered table tbody tr:nth-child(even):hover td,
+.markdown-preview-view .table-view-table tbody tr:nth-child(even):hover td,
+.markdown-rendered .table-view-table tbody tr:nth-child(even):hover td,
+.dataview.table-view-table tbody tr:nth-child(even):hover td {
+  background-color: var(--fgs-table-bg);
+  color: var(--fgs-table-text);
+}
+
+/* =====================================================
+   TAGS
+   SOLID ROYAL SEALS
+   ===================================================== */
 
 .tag,
-.clickable-icon,
-.workspace-tab-header {
-
-
-transition:
-
-
-background .15s ease,
-color .15s ease;
-
-
+a.tag {
+  background-color: var(--fgs-tag-bg);
+  background-image: none;
+  border: 1px solid var(--fgs-tag-border);
+  border-radius: 20px;
+  color: var(--fgs-tag-text);
+  padding: 2px 9px;
+  transition: var(--fgs-transition);
 }
 
-
-
-/* Graph animation */
-
-
-.graph-view .node {
-
-
-transition:
-
-
-filter .2s ease,
-transform .2s ease;
-
-
+.tag:hover,
+a.tag:hover {
+  background-color: var(--fgs-tag-bg-hover);
+  color: var(--fgs-tag-text-hover);
+  border-color: var(--fgs-tag-border);
 }
+
 /* =====================================================
-   FORGOTTEN GOLDEN SANCTUARY
-   COMPLETE LIGHT MODE
-   PARCHMENT GLASS + DARK GOLD READABILITY
+   TASKS
    ===================================================== */
 
-
-/* =========================
-   LIGHT VARIABLES
-   ========================= */
-
-.theme-light {
-
---sanctuary-light-bg:
-#e7decc;
-
---sanctuary-paper:
-#f5f0e6;
-
---sanctuary-panel:
-rgba(245,240,230,.82);
-
---sanctuary-border:
-rgba(130,90,35,.25);
-
---sanctuary-black:
-#211b14;
-
---sanctuary-gold-dark:
-#60400d;
-
---sanctuary-gold:
-#8b641b;
-
+.task-list-item-checkbox {
+  background-color: var(--fgs-input-bg);
+  background-image: none;
+  border-color: var(--fgs-bronze);
 }
 
-
-/* =========================
-   MAIN BACKGROUND
-   ========================= */
-
-.theme-light .app-container {
-
-background:
-
-radial-gradient(
-circle at 20% 20%,
-rgba(184,150,74,.12),
-transparent 45%
-),
-
-linear-gradient(
-135deg,
-#eee5d3,
-#d9ccb3
-);
-
+.task-list-item-checkbox:checked {
+  background-color: var(--fgs-accent);
+  border-color: var(--fgs-accent);
 }
 
-
-
-/* =========================
-   GLASS PANELS
-   ========================= */
-
-.theme-light .workspace-split,
-.theme-light .workspace-leaf,
-.theme-light .workspace-ribbon,
-.theme-light .side-dock-ribbon,
-.theme-light .nav-files-container {
-
-
-background:
-
-rgba(245,240,230,.65);
-
-
-backdrop-filter:
-
-blur(18px);
-
-
--webkit-backdrop-filter:
-
-blur(18px);
-
-
-border-color:
-
-var(--sanctuary-border);
-
+.markdown-preview-view .task-list-item.is-checked,
+.markdown-rendered .task-list-item.is-checked {
+  color: var(--fgs-text-muted);
 }
 
+/* =====================================================
+   PROPERTIES AND FRONTMATTER
+   ===================================================== */
 
-
-/* =========================
-   READING MODE
-   ========================= */
-
-.theme-light .workspace-leaf-content {
-
-
-background:
-
-rgba(245,240,230,.55);
-
+.metadata-container {
+  background-color: var(--fgs-properties-bg);
+  background-image: none;
+  border: 1px solid var(--fgs-border);
+  border-radius: 12px;
+  padding: 8px;
 }
 
-
-
-.theme-light .markdown-preview-view,
-.theme-light .markdown-source-view {
-
-
-background:
-
-rgba(250,246,238,.75);
-
-
-color:
-
-#211b14;
-
-
+.metadata-property-key {
+  color: var(--fgs-properties-key);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
 }
 
-
-
-/* Reading text */
-
-.theme-light .markdown-preview-view {
-
-
-font-size:
-
-17px;
-
-
-line-height:
-
-1.85;
-
-
-font-weight:
-
-520;
-
-
-color:
-
-#211b14;
-
-
+.metadata-property-value {
+  color: var(--fgs-properties-value);
 }
 
-
-/* Paragraph */
-
-.theme-light .markdown-preview-view p {
-
-
-color:
-
-#211b14;
-
-
+.metadata-add-button {
+  color: var(--fgs-text-muted);
 }
 
-
-
-/* =========================
-   HEADINGS
-   ========================= */
-
-
-.theme-light h1 {
-
-
-color:
-
-#5b3908;
-
-
-font-weight:
-
-900;
-
-
+.frontmatter,
+.frontmatter-container {
+  background-color: var(--fgs-properties-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border);
+  border-radius: var(--fgs-radius-md);
 }
 
+/* =====================================================
+   CODE BLOCKS AND INLINE CODE
+   SOLID
+   ===================================================== */
 
-
-.theme-light h2 {
-
-
-color:
-
-#68450d;
-
-
-font-weight:
-
-800;
-
-
+.markdown-preview-view code,
+.markdown-rendered code {
+  background-color: var(--fgs-inline-code-bg);
+  background-image: none;
+  color: var(--fgs-inline-code-text);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: var(--fgs-font-mono);
 }
 
-
-
-.theme-light h3 {
-
-
-color:
-
-#80601c;
-
-
-font-weight:
-
-800;
-
-
+.markdown-preview-view pre,
+.markdown-rendered pre {
+  background-color: var(--fgs-code-bg);
+  background-image: none;
+  border: 1px solid var(--fgs-code-border);
+  border-radius: var(--fgs-radius-md);
+  color: var(--fgs-code-normal);
+  padding: 14px 16px;
 }
 
-
-/* =========================
-   LINKS
-   ========================= */
-
-
-.theme-light a {
-
-
-color:
-
-#765015;
-
-
-font-weight:
-
-700;
-
-
+.markdown-preview-view pre code,
+.markdown-rendered pre code {
+  background-color: transparent;
+  color: var(--fgs-code-normal);
+  font-family: var(--fgs-font-mono);
+  font-size: .95em;
+  padding: 0;
 }
 
-
-
-.theme-light a:hover {
-
-
-color:
-
-#a67620;
-
-
+.copy-code-button {
+  background-color: var(--fgs-panel);
+  background-image: none;
+  color: var(--fgs-text-muted);
+  border: 1px solid var(--fgs-border);
+  border-radius: var(--fgs-radius-sm);
 }
 
-
-
-/* =========================
-   FILE EXPLORER
-   ========================= */
-
-
-.theme-light .nav-folder-title,
-.theme-light .nav-file-title {
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-650;
-
-
+.copy-code-button:hover {
+  color: var(--fgs-accent-bright);
 }
 
+/* =====================================================
+   EMBEDS
+   ===================================================== */
 
-
-.theme-light .nav-folder-title:hover,
-.theme-light .nav-file-title:hover {
-
-
-background:
-
-rgba(184,150,74,.18);
-
-
-color:
-
-#69440b;
-
-
+.markdown-embed {
+  background-color: var(--fgs-panel);
+  background-image: none;
+  border: 1px solid var(--fgs-border);
+  border-radius: var(--fgs-radius-md);
+  color: var(--fgs-text);
 }
 
-
-
-.theme-light .nav-file-title.is-active {
-
-
-background:
-
-rgba(184,150,74,.25);
-
-
-color:
-
-#513000;
-
-
-font-weight:
-
-800;
-
-
+.markdown-embed-content {
+  background-color: transparent;
 }
 
-
-
-/* =========================
-   TABS
-   ========================= */
-
-
-.theme-light .workspace-tab-header-container {
-
-
-background:
-
-rgba(220,210,190,.65);
-
-
+.markdown-embed-title {
+  color: var(--fgs-accent-soft);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
 }
 
+/* =====================================================
+   MENUS, MODALS, POPOVERS, NOTICES
+   ALL SOLID PANELS
+   ===================================================== */
 
-
-.theme-light .workspace-tab-header {
-
-
-background:
-
-rgba(245,240,230,.55);
-
-
-color:
-
-#392b1b;
-
-
-font-weight:
-
-650;
-
-
+.menu,
+.modal,
+.prompt,
+.suggestion-container,
+.popover.hover-popover,
+.notice {
+  background-color: var(--fgs-popup-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border);
 }
 
-
-
-.theme-light .workspace-tab-header.is-active {
-
-
-background:
-
-rgba(184,150,74,.25);
-
-
-color:
-
-#513000;
-
-
+.menu {
+  border-radius: var(--fgs-radius-md);
+  box-shadow: var(--fgs-shadow-md);
 }
 
-
-
-/* =========================
-   TABLES
-   DARK GOLD CONTRAST
-   ========================= */
-
-
-.theme-light table,
-.theme-light .dataview.table-view-table {
-
-
-background:
-
-#f5f0e6;
-
-
-border:
-
-1px solid rgba(120,80,20,.35);
-
-
+.modal {
+  border-radius: var(--fgs-radius-lg);
+  box-shadow: var(--fgs-shadow-lg);
 }
 
-
-
-.theme-light th {
-
-
-background:
-
-rgba(184,150,74,.25);
-
-
-color:
-
-#2b1c08;
-
-
-font-weight:
-
-900;
-
-
+.prompt {
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: 12px;
+  box-shadow: var(--fgs-shadow-lg);
 }
 
-
-
-.theme-light td {
-
-
-background:
-
-rgba(250,246,238,.95);
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-650;
-
-
+.suggestion-container {
+  border-radius: var(--fgs-radius-md);
+  box-shadow: var(--fgs-shadow-md);
 }
 
-
-
-.theme-light td:first-child {
-
-
-color:
-
-#5b3908;
-
-
-font-weight:
-
-800;
-
-
+.popover.hover-popover {
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: 12px;
+  box-shadow: var(--fgs-shadow-lg);
 }
 
-
-
-.theme-light tr:hover td {
-
-
-background:
-
-rgba(184,150,74,.18);
-
-
-color:
-
-#1b1308;
-
-
+.notice {
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: var(--fgs-radius-md);
+  box-shadow: var(--fgs-shadow-md);
 }
 
-
-
-/* =========================
-   DATAVIEW
-   ========================= */
-
-
-.theme-light .dataview.table-view-table th {
-
-
-color:
-
-#2b1c08;
-
-
+.modal-container {
+  background-color: var(--fgs-overlay);
 }
 
-
-
-.theme-light .dataview.table-view-table td {
-
-
-color:
-
-#211b14;
-
-
+.modal-title {
+  color: var(--fgs-accent-soft);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
 }
 
-
-
-/* =========================
-   PROPERTIES
-   ========================= */
-
-
-.theme-light .metadata-container {
-
-
-background:
-
-rgba(245,240,230,.95);
-
-
-border:
-
-1px solid rgba(120,80,20,.35);
-
-
-border-radius:
-
-12px;
-
-
+.menu-item {
+  color: var(--fgs-text);
 }
 
-
-
-.theme-light .metadata-property-key {
-
-
-color:
-
-#62400b;
-
-
-font-weight:
-
-900;
-
-
+.menu-item:hover,
+.menu-item.is-selected {
+  background-color: var(--fgs-hover);
+  color: var(--fgs-text-bright);
 }
 
-
-
-.theme-light .metadata-property-value {
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-650;
-
-
+.menu-item.is-disabled {
+  color: var(--fgs-text-faint);
 }
 
-
-
-/* =========================
-   YAML FRONTMATTER
-   ========================= */
-
-
-.theme-light .frontmatter,
-.theme-light .frontmatter-container,
-.theme-light .cm-hmd-frontmatter {
-
-
-background:
-
-#f5f0e6;
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-650;
-
-
+.menu-item-icon {
+  color: var(--fgs-accent);
 }
 
-
-
-/* YAML keys */
-
-.theme-light .cm-atom,
-.theme-light .cm-hmd-frontmatter-key {
-
-
-color:
-
-#79520d;
-
-
-font-weight:
-
-900;
-
-
+.menu-item.is-disabled .menu-item-icon {
+  color: var(--fgs-text-faint);
 }
 
-
-
-/* YAML values */
-
-.theme-light .cm-string,
-.theme-light .cm-hmd-frontmatter-value {
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-650;
-
-
+.menu-separator {
+  background-color: var(--fgs-border);
 }
 
-
-
-/* =========================
-   CODE BLOCKS
-   ========================= */
-
-
-.theme-light pre {
-
-
-background:
-
-#eee4d2;
-
-
-border:
-
-1px solid rgba(120,80,20,.35);
-
-
+.suggestion-item {
+  color: var(--fgs-text);
 }
 
-
-
-.theme-light pre code {
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-600;
-
-
-font-family:
-
-"JetBrains Mono",
-monospace;
-
-
+.suggestion-item.is-selected {
+  background-color: var(--fgs-active);
+  color: var(--fgs-text-bright);
 }
 
-
-
-.theme-light :not(pre)>code {
-
-
-background:
-
-rgba(184,150,74,.18);
-
-
-color:
-
-#5b3908;
-
-
-font-weight:
-
-750;
-
-
+.suggestion-title {
+  color: var(--fgs-text);
 }
 
-
-
-/* =========================
-   CALLOUTS
-   ========================= */
-
-
-.theme-light .callout {
-
-
-background:
-
-rgba(245,240,230,.85);
-
-
-border:
-
-1px solid rgba(130,90,35,.30);
-
-
+.suggestion-note {
+  color: var(--fgs-text-muted);
 }
 
-
-
-.theme-light .callout-title {
-
-
-color:
-
-#60400d;
-
-
-font-weight:
-
-900;
-
-
+.suggestion-flair {
+  color: var(--fgs-accent);
 }
 
-
-
-.theme-light .callout-content {
-
-
-color:
-
-#211b14;
-
-
-font-weight:
-
-600;
-
-
+.prompt-input {
+  background-color: transparent;
+  color: var(--fgs-text);
+  border: 0;
+  border-bottom: 1px solid var(--fgs-border-soft);
+  border-radius: 0;
 }
 
+.prompt-results {
+  color: var(--fgs-text);
+}
 
+.tooltip {
+  background-color: var(--fgs-tooltip-bg);
+  background-image: none;
+  color: var(--fgs-tooltip-text);
+  border: 1px solid var(--fgs-border);
+  border-radius: 8px;
+  box-shadow: var(--fgs-shadow-sm);
+}
 
-/* =========================
-   SCROLLBAR
-   ========================= */
+/* =====================================================
+   SETTINGS WINDOW
+   ===================================================== */
 
+.vertical-tab-header {
+  background-color: var(--fgs-sidebar-bg);
+  background-image: none;
+}
 
-.theme-light ::-webkit-scrollbar-thumb {
+.vertical-tab-content {
+  background-color: var(--fgs-popup-bg);
+  background-image: none;
+  color: var(--fgs-text);
+}
 
+.vertical-tab-nav-item {
+  color: var(--fgs-text-muted);
+  background-color: transparent;
+  background-image: none;
+  border-radius: var(--fgs-radius-sm);
+  transition: var(--fgs-transition);
+}
 
-background:
+.vertical-tab-nav-item:hover {
+  background-color: var(--fgs-hover);
+  color: var(--fgs-accent-soft);
+}
 
-rgba(130,90,35,.45);
+.vertical-tab-nav-item.is-active {
+  background-color: var(--fgs-active);
+  color: var(--fgs-accent-bright);
+}
 
+.setting-item {
+  border-color: var(--fgs-border-soft);
+}
 
+.setting-item-name {
+  color: var(--fgs-text);
+  font-weight: 600;
+}
+
+.setting-item-description {
+  color: var(--fgs-text-muted);
+}
+
+.setting-hotkey {
+  color: var(--fgs-text-faint);
+}
+
+/* =====================================================
+   GRAPH VIEW
+   ATMOSPHERE SURFACE + SOLID CONTROL PANEL
+   ===================================================== */
+
+.graph-view {
+  background: var(--fgs-graph-bg);
+}
+
+.graph-view.color-fill {
+  color: var(--fgs-graph-node);
+}
+
+.graph-view.color-fill-focused {
+  color: var(--fgs-graph-node-focused);
+}
+
+.graph-view.color-fill-tag {
+  color: var(--fgs-graph-node-tag);
+}
+
+.graph-view.color-fill-unresolved {
+  color: var(--fgs-graph-node-unresolved);
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--fgs-graph-node-attachment);
+}
+
+.graph-view.color-line,
+.graph-view.color-arrow {
+  color: var(--fgs-graph-line);
+}
+
+.graph-view.color-text {
+  color: var(--fgs-graph-text);
+}
+
+.graph-controls {
+  background-color: var(--fgs-popup-bg);
+  background-image: none;
+  color: var(--fgs-text);
+  border: 1px solid var(--fgs-border-strong);
+  border-radius: var(--fgs-radius-lg);
+  box-shadow: var(--fgs-shadow-lg);
+}
+
+.graph-control-section-header {
+  color: var(--fgs-accent-soft);
+  font-family: var(--fgs-font-heading);
+  font-weight: 600;
+}
+
+.graph-control-section-container {
+  color: var(--fgs-text);
 }

@@ -1,220 +1,160 @@
 # Forgotten Golden Sanctuary
 
-![Obsidian Theme](https://img.shields.io/badge/Obsidian-Theme-purple)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Modes](https://img.shields.io/badge/Dark%20%26%20Light-Supported-d4af37)
-![Mobile](https://img.shields.io/badge/Mobile-Supported-blue)
+> **A quiet place for your thoughts.**
 
-A handcrafted Obsidian theme inspired by forgotten libraries, ancient sanctuaries, and warm golden archives.
+Forgotten Golden Sanctuary is an Obsidian theme inspired by forgotten libraries, ancient sanctuaries, parchment manuscripts, and warm golden archives.
 
-Designed for comfortable reading, focused writing, and immersive knowledge management.
+Built for **comfortable reading, focused writing, and immersive knowledge management.**
 
 ---
 
-# Preview
+## ✦ Enter the Sanctuary
 
-![Forgotten Golden Sanctuary](screenshot.png?v=2)
+| Dark Mode | Light Mode |
+| --------- | ---------- |
+| ![Dark Mode](dark.png) | ![Light Mode](light.png) |
 
----
-
-# Support ☕
-
-If you enjoy this theme and want to support future development:
-
-<a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank">
-<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217">
-</a>
-
-[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cosmicseafox)
----
-
-# Screenshots
-
-| View | Preview |
-|---|---|
-| Dark Mode | ![Dark](screenshots/dark.png) |
-| Light Mode | ![Light](screenshots/light.png) |
-| Reading Mode | ![Reading](screenshots/reading.png) |
-| Source Mode | ![Source](screenshots/source.png) |
-| Graph View | ![Graph](screenshots/graph.png) |
-| Tables | ![Tables](screenshots/table.png) |
-| Properties | ![Properties](screenshots/properties.png) |
-| Code Blocks | ![Code](screenshots/code.png) |
+> Screenshots are from the theme showcase vault.
 
 ---
 
-# Features
+## ✦ The Latest Chapter
 
-| Feature | Description |
-|---|---|
-| 🌙 Dark Mode | Warm archive atmosphere |
-| ☀️ Light Mode | Soft parchment interface |
-| 📖 Reading Mode | Long-form reading focused |
-| ✍️ Source Mode | Clean writing experience |
-| 🏛 Typography | Cinzel + Inter fonts |
-| 📑 Properties | Clear metadata styling |
-| 📊 Tables | Improved readability |
-| 💻 Code Blocks | Clean code presentation |
-| 📝 Callouts | Custom archive styles |
-| 🕸 Graph View | Golden constellation design |
-| 🏷 Tags | Golden archive badges |
-| ☑ Tasks | Custom checkbox styling |
-| 📱 Mobile | Responsive layout |
+The latest update focuses on making the Sanctuary **calmer, wider, and more refined.**
 
----
+### A Better Reading & Writing Space
 
-# Installation
+- Reading width expanded to approximately **980px**
+- Centered long-form content with improved spacing
+- Source Mode follows the same comfortable reading width
+- Solid editor and syntax-highlighting surfaces
+- Refined typography for extended writing sessions
 
-1. Download this repository.
+### A More Refined Interface
 
-2. Copy the theme folder:
+- Light Mode rebuilt with solid parchment surfaces
+- Improved dark-ink readability and contrast
+- Removed background-pattern bleeding through interface elements
+- Tables now use a clean, unified archive style
+- Stable table headers without distracting zebra striping
+- File Explorer indentation remains consistent while navigating
 
-```
+### A Consistent Visual System
 
-Forgotten-Golden-Sanctuary
-
-```
-
-into:
-
-```
-
-YourVault/.obsidian/themes/
-
-```
-
-3. Open Obsidian:
-
-```
-
-Settings → Appearance → Themes
-
-```
-
-4. Select:
-
-```
-
-Forgotten Golden Sanctuary
-
-```
+- Centralized design tokens for colors and interface elements
+- Consistent styling across Reading Mode, Source Mode, menus, tables, and navigation
+- Warm gold, parchment, bronze, and obsidian tones throughout the experience
 
 ---
 
-# Folder Structure
+## ✦ What You'll Find
 
-```
+🌙 **Dark Mode** — Obsidian shadows, parchment text, and antique gold
 
-Forgotten-Golden-Sanctuary/
+☀️ **Light Mode** — Warm parchment with comfortable dark-ink contrast
 
-├── theme.css
-├── manifest.json
-├── README.md
-├── LICENSE
-├── screenshot.png
-│
-└── screenshots/
-├── dark.png
-├── light.png
-├── reading.png
-├── source.png
-├── graph.png
-├── table.png
-├── properties.png
-└── code.png
+📖 **Reading Mode** — Designed for long reading sessions
 
-```
+✍️ **Source Mode** — Clean and focused writing
+
+🏛 **Typography** — Cinzel and Inter
+
+🕸 **Graph View** — A subtle golden constellation aesthetic
+
+📊 **Tables & Properties** — Clear archive-style presentation
+
+📝 **Callouts** — Lore, Journal, Artifact, Secret, Quest, and Research
+
+🏷 **Tags & Tasks** — Subtle golden details
+
+💻 **Code Blocks** — Comfortable Markdown, CSS, YAML, and JSON
+
+📂 **File Explorer** — Structured archive navigation
+
+📱 **Mobile** — Responsive and readable
 
 ---
 
-# Fonts
+## ✦ The Atmosphere
+
+The design is intentionally **warm, restrained, and quiet.**
+
+**Comfort · Clarity · Focus · Atmosphere**
+
+The goal isn't to decorate every corner of Obsidian.
+
+It's to create a place where you can **stay for hours.**
+
+---
+
+## ✦ Typography
 
 | Purpose | Font |
-|---|---|
+| ------- | ---- |
 | Body | Inter |
 | Headings | Cinzel |
-| Title | Cinzel Decorative |
+| Titles | Cinzel Decorative |
 | Code | JetBrains Mono |
 
 ---
 
-# Compatibility
+## ✦ Compatibility
 
-| Feature | Status |
-|---|---|
-| Obsidian Desktop | ✅ |
-| Obsidian Mobile | ✅ |
-| Reading Mode | ✅ |
-| Source Mode | ✅ |
-| Live Preview | ✅ |
-| Graph View | ✅ |
-| Properties | ✅ |
-| Tables | ✅ |
-| Callouts | ✅ |
-| Code Blocks | ✅ |
+Designed for:
+
+**Desktop · Mobile · Reading Mode · Source Mode · Live Preview · Graph View · Properties · YAML · Callouts · Tables · Code Blocks**
+
+Compatible with popular plugins including:
+
+**Dataview · Tasks · Templater · Calendar · Kanban · Charts**
 
 ---
 
-# Design Philosophy
+## ✦ Installation
 
-Forgotten Golden Sanctuary focuses on:
+Download the repository and place the theme folder inside:
 
-- Comfortable reading
-- Reduced eye strain
-- Clear typography
-- Balanced contrast
-- Minimal distractions
-- Warm fantasy archive atmosphere
+```text
+YourVault/.obsidian/themes/Forgotten Golden Sanctuary/
+```
 
-Created for:
+Then open:
 
-- Writers
-- Researchers
-- Students
-- Knowledge keepers
+**Settings → Appearance → Themes → Forgotten Golden Sanctuary**
 
 ---
 
-# Dark Mode
+# ☕
 
-- Deep archive backgrounds
-- Warm parchment text
-- Antique gold accents
-- Low-glare reading environment
+## Support the Sanctuary
 
-# Light Mode
+If you enjoy Forgotten Golden Sanctuary and want to support future development, your support helps with:
 
-- Soft parchment surfaces
-- Dark readable text
-- Golden highlights
-- Comfortable contrast
+- New theme editions
+- Plugin compatibility
+- Long-term maintenance
+- Community improvements
 
----
+### Buy Me A Coffee
 
-# Credits
+<a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank">
+<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60">
+</a>
 
-Fonts:
+### Ko-fi
 
-- Inter
-- Cinzel
-- Cinzel Decorative
-- JetBrains Mono
-
-Made for the Obsidian community.
+<a href="https://ko-fi.com/cosmicseafox" target="_blank">
+<img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" height="60">
+</a>
 
 ---
 
-# License
+## License
 
 MIT License
 
-Made with ❤️ for writers, researchers, and knowledge keepers.
+---
 
-# Support ☕
+**Made with ❤️ for writers, researchers, and knowledge keepers.**
 
-If you enjoy this theme and want to support future development:
-
-<a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank">
-<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217">
-</a>
-
+*Welcome to the Sanctuary.*

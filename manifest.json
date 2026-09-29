@@ -1,9 +1,8 @@
 {
   "name": "Forgotten Golden Sanctuary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.0.0",
   "author": "CosmicSeaFox",
   "authorUrl": "https://github.com/CosmicSeaFox",
-  "fundingUrl": " buymeacoffee.com/CosmicSeaFox",
-  "fundingUrl": "https://ko-fi.com/cosmicseafox"
+  "fundingUrl": "https://www.buymeacoffee.com/CosmicSeaFox"
 }
