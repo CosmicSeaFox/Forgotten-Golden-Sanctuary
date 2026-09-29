@@ -10,9 +10,15 @@ Built for **comfortable reading, focused writing, and immersive knowledge manage
 
 ## ✦ Enter the Sanctuary
 
-| Dark Mode | Light Mode |
-| --------- | ---------- |
-| ![Dark Mode](./screenshots/dark.png) | ![Light Mode](./screenshots/light.png) |
+### Dark Mode
+
+![Forgotten Golden Sanctuary — Dark Mode](./dark.png)
+
+### Light Mode
+
+![Forgotten Golden Sanctuary — Light Mode](./light.png)
+
+> Screenshots are from the theme showcase vault.
 
 ---
 
@@ -110,10 +116,26 @@ Compatible with popular plugins including:
 
 ## ✦ Installation
 
-Download the repository and place the theme folder inside:
+### Community Themes
+
+Once available through the Obsidian Community Themes:
+
+**Settings → Appearance → Community Themes → Browse → Forgotten Golden Sanctuary → Install**
+
+### Manual Installation
+
+Download the latest release and place the theme files inside:
 
 ```text
 YourVault/.obsidian/themes/Forgotten Golden Sanctuary/
+```
+
+The theme folder should contain:
+
+```text
+Forgotten Golden Sanctuary/
+├── manifest.json
+└── theme.css
 ```
 
 Then open:
