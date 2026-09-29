@@ -12,9 +12,7 @@ Built for **comfortable reading, focused writing, and immersive knowledge manage
 
 | Dark Mode | Light Mode |
 | --------- | ---------- |
-| ![Dark Mode](dark.png) | ![Light Mode](light.png) |
-
-> Screenshots are from the theme showcase vault.
+| ![Dark Mode](./screenshots/dark.png) | ![Light Mode](./screenshots/light.png) |
 
 ---
 
